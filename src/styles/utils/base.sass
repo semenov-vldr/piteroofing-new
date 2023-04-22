@@ -67,8 +67,27 @@ main
   margin-bottom: clamp(28px, calc(28px + (80 - 28) * ((100vw - 768px) / (1920 - 768))), 80px)
 
 // Button
-//.button
-
+.button
+  padding: 16px
+  transition: $transition
+  border: 1px solid transparent
+  border-radius: 30px
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  &--accent
+    background-color: $accent
+    color: $bg-grey
+    &:hover
+      background-color: #C16F6C
+  &--outline
+    border-color: $accent
+    color: $white
+    background: transparent
+    &:hover
+      background: linear-gradient(90deg, rgba(255,147,143,1) 0%, rgba(255,200,198,1) 100%)
+      color: $bg-grey
 
 
 
