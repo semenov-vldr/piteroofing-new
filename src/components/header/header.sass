@@ -15,8 +15,6 @@
     .header__nav
       transform: translateX(0)
       opacity: 1
-    .header__burger
-      opacity: 0
 
   &__container
     display: flex
@@ -76,33 +74,17 @@
 
 
   &__burger
-    width: 30px
-    height: 30px
-    position: relative
-    transform: rotate(0deg)
-    transition: .5s ease-in-out
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 18px
+    height: 12px
     cursor: pointer
-    margin-top: 9px
-    z-index: 1
     @media (min-width: 980px)
       display: none
-
     &-line
-      display: block
-      position: absolute
-      height: 3px
+      height: 2px
       width: 100%
-      background: #fff
+      background: $white
       border-radius: 9px
-      left: 0
-      transform: rotate(0deg)
-      transition: .25s ease-in-out
-      &:nth-child(1)
-        top: 0
-      &:nth-child(2),
-      &:nth-child(3)
-        top: 9px
-      &:nth-child(4)
-        top: 18px
-
 
