@@ -2,7 +2,6 @@
   background-color: $bg-black
   padding: 48px 0 16px
 
-
   &__menu
     display: flex
     gap: 96px
@@ -17,10 +16,30 @@
     flex-direction: column
     gap: 16px
 
+  &__contacts-link
+    position: relative
+    display: flex
+    align-items: center
+    gap: 8px
+    &::after
+      content: ""
+      display: inline-block
+      width: 16px
+      height: 16px
+      background-position: center
+      background-repeat: no-repeat
+      background-size: cover
+    &--telegram::after
+      background-image: url('../img/icons/social/telegram-footer.svg')
+    &--whatsapp::after
+      background-image: url('../img/icons/social/whatsapp-footer.svg')
+
   &__politics
     display: block
     margin-top: 114px
     font-size: 12px
     @media (max-width: 480px)
       margin-top: 32px
+    &:hover
+      text-decoration: underline
 
