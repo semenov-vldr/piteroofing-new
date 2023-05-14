@@ -1,0 +1,18 @@
+.reviews
+
+  &__container
+    max-width: 960px
+    overflow: hidden
+
+  .swiper-slide
+    transition: 0.5s
+
+  .swiper-slide img
+    width: 300px
+    height: auto
+
+  .swiper-slide-active
+    position: relative
+    z-index: 1
+    @media (min-width: $width-mobile)
+      transform: scale(1.2)

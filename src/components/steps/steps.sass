@@ -1,0 +1,41 @@
+.steps
+
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    justify-content: space-between
+    gap: 56px
+    @media (max-width: 768px)
+      grid-template-columns: 1fr
+      gap: 32px
+
+  &__item
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+
+  &__icon
+    max-width: 154px
+    height: auto
+    margin-bottom: 16px
+    @media (max-width: 768px)
+      max-width: 140px
+    @media (max-width: 480px)
+      max-width: 120px
+
+  &__title
+    margin-bottom: 12px
+    font-weight: 500
+    @include fontSize(16, 28)
+
+  &__desc
+    @include fontSize(14, 20)
+    line-height: 1.2
+
+  &__button
+    margin: 64px auto 0
+    @media (max-width: 768px)
+      margin-top: 40px
+
+
