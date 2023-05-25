@@ -1,0 +1,80 @@
+.accordion
+  &__container
+    max-width: 900px
+    margin: 0 auto
+    overflow: hidden
+
+
+
+  &__list
+    list-style-type: none
+    display: flex
+    flex-direction: column
+
+  &__item
+    padding: 12px
+    border-bottom: 1px solid #9B9B9B
+    @media (max-width: 768px)
+      padding: 12px 10px
+    &.js-accordion-active .accordion__content
+      padding: 16px 24px
+      max-height: 1000px
+      @media (max-width: 768px)
+        padding: 8px 16px
+        max-height: 500px
+        overflow: auto
+        &::-webkit-scrollbar
+          width: 0
+          height: 0
+
+
+    &.js-accordion-active .accordion__title,
+    &:hover .accordion__title
+      color: #fff
+    &.js-accordion-active .accordion__title::after
+      transform: rotate(-90deg)
+    &.js-accordion-active .accordion__title::before,
+    &:hover .accordion__title::before
+      color: $accent
+
+
+  &__title
+    @include fontSize(14, 24)
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-between
+    column-gap: 20px
+    cursor: pointer
+    color: rgba(#fff, 0.6)
+    &::after
+      content: ""
+      display: inline-block
+      background-image: url('../img/icons/accord-arrow.svg')
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center
+      width: 30px
+      height: 17px
+      transition: 0.3s
+      flex: 0 0 30px
+      @media (max-width: 768px)
+        width: 18px
+        height: 10px
+        flex: 0 0 18px
+
+
+
+  &__content
+    @include fontSize(14, 16)
+    border-radius: 8px
+    max-height: 0
+    padding: 0 24px
+    overflow: hidden
+    transition: 0.1s
+    @media (max-width: 768px)
+      padding: 0 16px
+
+    &-link
+      color: $accent
+
