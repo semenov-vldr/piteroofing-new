@@ -26,10 +26,7 @@
   <body>
     <div class="page">
       <header class="header">
-        <div class="header__container container">
-          <div class="header__logo">
-            <!--img(src="").header__logo-icon-->
-          </div>
+        <div class="header__container container"><a class="header__logo" href="index.html"><img class="header__logo-icon" src="./assets/img/icons/logo.svg"></a>
           <button class="header__burger"><span class="header__burger-line"></span><span class="header__burger-line"></span><span class="header__burger-line"></span></button>
           <nav class="header__nav"><img class="header__nav-arrow" src="./assets/img/icons/arrow_forward.svg">
             <ul class="header__nav-list">
@@ -39,9 +36,24 @@
               <li class="header__nav-item"><a class="header__nav-link" href="##">FAQ</a></li>
               <li class="header__nav-item"><a class="header__nav-link" href="##">Контакты</a></li>
             </ul>
-          </nav><a class="header__phone" href="tel:+79255536220"><img src="./assets/img/icons/phone.svg"><span>Заказать звонок</span></a>
+          </nav>
+          <button class="header__phone" type="button"><img src="./assets/img/icons/phone.svg"><span>Заказать звонок</span></button>
         </div>
       </header>
+      <div class="popup-call">
+        <div class="popup-call__content">
+          <button class="popup-call__close">X</button>
+          <form class="popup-call__form" method="POST" action="" enctype="multipart/form-data" autocomplete="off">
+            <label><span>Ваше имя</span>
+              <input placeholder="Дмитрий">
+            </label>
+            <label><span>Телефон</span>
+              <input placeholder="+7 999 999 99 99">
+            </label>
+            <button class="popup-call__button" type="submit">Заказать звонок</button>
+          </form>
+        </div>
+      </div>
       <main>
         <div class="hero" style="background-image: url('./assets/img/hero-img.jpg')">
           <div class="hero__container container">
@@ -110,34 +122,42 @@
                 <div class="swiper-slide"><img src="./assets/img/reviews/02.jpg"></div>
                 <div class="swiper-slide"><img src="./assets/img/reviews/03.jpg"></div>
               </div>
-              <div class="swiper-navigation">
-                <div class="slider-nav__prev"></div>
-                <div class="slider-nav__next"></div>
-              </div>
+              <!--.swiper-navigation-->
+              <!--  .slider-nav__prev-->
+              <!--  .slider-nav__next-->
               <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
         <!-- пример разметки-->
         <div class="accordion">
-          <div class="accordion__container">
+          <div class="accordion__container container">
             <h2 class="title-section">Часто задаваемые вопросы</h2>
             <ol class="accordion__list">
               <li class="accordion__item">
                 <p class="accordion__title">Правила поведения</p>
-                <p class="accordion__content">Мы всегда идем навстречу клиенту и стараемся найти выход из текущего положения Заказчика. В некоторых случаях мы допускаем возможность пропустить его вне очереди и работать в ускоренном режиме.</p>
+                <div class="accordion__content">
+                  <ul>
+                    <li>Руки должны быть свободны</li>
+                    <li>Не толкать других участников и не держаться за них</li>
+                    <li>Запрещено трогать провода и кидать вниз любые предметы</li>
+                    <li>Не подходить близко к краю и не заходить за специальные ограждения</li>
+                  </ul>
+                  <p>Проносить с собой алкогольные напитки запрещено. Так же не имеет смысла "для храбрости" принимать алкоголь перед экскурсией. Страх у вас не пропадет.</p>
+                  <p>Находиться во время экскурсии в алкогольном опьянении запрещено!</p>
+                </div>
               </li>
               <li class="accordion__item">
                 <p class="accordion__title">Какие есть ограничения по возрасту?</p>
-                <p class="accordion__content">Мы всегда идем навстречу клиенту и стараемся найти выход из текущего положения Заказчика. В некоторых случаях мы допускаем возможность пропустить его вне очереди и работать в ускоренном режиме.</p>
+                <p class="accordion__content">Ограничения по возрасту есть для детей - младше 8 лет нельзя. Дети старше 8 лет сопровождаются взрослыми, которые несут за них полную ответственность.</p>
               </li>
               <li class="accordion__item">
                 <p class="accordion__title">Это безопасно?</p>
-                <p class="accordion__content">Мы всегда идем навстречу клиенту и стараемся найти выход из текущего положения Заказчика. В некоторых случаях мы допускаем возможность пропустить его вне очереди и работать в ускоренном режиме.</p>
+                <p class="accordion__content">Все крыши оборудованы специальным нескользящим покрытием, а так же имеются ограждения по краям крыши.</p>
               </li>
               <li class="accordion__item">
                 <p class="accordion__title">Как все это проходит?</p>
-                <p class="accordion__content">Мы всегда идем навстречу клиенту и стараемся найти выход из текущего положения Заказчика. В некоторых случаях мы допускаем возможность пропустить его вне очереди и работать в ускоренном режиме.</p>
+                <p class="accordion__content">??Мы всегда идем навстречу клиенту и стараемся найти выход из текущего положения Заказчика. В некоторых случаях мы допускаем возможность пропустить его вне очереди и работать в ускоренном режиме.</p>
               </li>
               <li class="accordion__item">
                 <p class="accordion__title">Когда можно подняться на крышу?</p>
@@ -153,7 +173,8 @@
               </li>
               <li class="accordion__item">
                 <p class="accordion__title">Как одеться и обуться чтобы было комфортно?</p>
-                <p class="accordion__content">Мы всегда идем навстречу клиенту и стараемся найти выход из текущего положения Заказчика. В некоторых случаях мы допускаем возможность пропустить его вне очереди и работать в ускоренном режиме.</p>
+                <p class="accordion__content">
+                  Для вашего комфорта отдайте предпочтение удобной обуви и одежде. Надевайте обувь на плоской подошве (никаких каблуков и шпилек).Так же джинсы или спортивные штаны будут оптимальным для вас вариантом. Слишком пышные наряды оставьте для другого случая.</p>
               </li>
               <li class="accordion__item">
                 <p class="accordion__title">Есть ли на крыше уборная?</p>
@@ -165,7 +186,7 @@
               </li>
               <li class="accordion__item">
                 <p class="accordion__title">Как оплатить?</p>
-                <p class="accordion__content">Мы всегда идем навстречу клиенту и стараемся найти выход из текущего положения Заказчика. В некоторых случаях мы допускаем возможность пропустить его вне очереди и работать в ускоренном режиме.</p>
+                <p class="accordion__content">Оплатить экскурсию можно наличными гиду либо бансковским переводом</p>
               </li>
             </ol>
           </div>

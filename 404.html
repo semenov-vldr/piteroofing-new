@@ -26,10 +26,7 @@
   <body>
     <div class="page">
       <header class="header">
-        <div class="header__container container">
-          <div class="header__logo">
-            <!--img(src="").header__logo-icon-->
-          </div>
+        <div class="header__container container"><a class="header__logo" href="index.html"><img class="header__logo-icon" src="./assets/img/icons/logo.svg"></a>
           <button class="header__burger"><span class="header__burger-line"></span><span class="header__burger-line"></span><span class="header__burger-line"></span></button>
           <nav class="header__nav"><img class="header__nav-arrow" src="./assets/img/icons/arrow_forward.svg">
             <ul class="header__nav-list">
@@ -39,9 +36,24 @@
               <li class="header__nav-item"><a class="header__nav-link" href="##">FAQ</a></li>
               <li class="header__nav-item"><a class="header__nav-link" href="##">Контакты</a></li>
             </ul>
-          </nav><a class="header__phone" href="tel:+79255536220"><img src="./assets/img/icons/phone.svg"><span>Заказать звонок</span></a>
+          </nav>
+          <button class="header__phone" type="button"><img src="./assets/img/icons/phone.svg"><span>Заказать звонок</span></button>
         </div>
       </header>
+      <div class="popup-call">
+        <div class="popup-call__content">
+          <button class="popup-call__close">X</button>
+          <form class="popup-call__form" method="POST" action="" enctype="multipart/form-data" autocomplete="off">
+            <label><span>Ваше имя</span>
+              <input placeholder="Дмитрий">
+            </label>
+            <label><span>Телефон</span>
+              <input placeholder="+7 999 999 99 99">
+            </label>
+            <button class="popup-call__button" type="submit">Заказать звонок</button>
+          </form>
+        </div>
+      </div>
       <main>
       </main>
       <footer class="footer">
