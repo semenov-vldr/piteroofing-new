@@ -1,8 +1,8 @@
 header.header
   .header__container.container
 
-    .header__logo
-      //img(src="").header__logo-icon
+    a.header__logo(href="index.html")
+      img(src="./assets/img/icons/logo.svg").header__logo-icon
 
     button.header__burger
       span.header__burger-line
@@ -26,7 +26,9 @@ header.header
           a.header__nav-link(href="##") Контакты
 
 
-    a.header__phone(href="tel:+79255536220")
+    button.header__phone(type="button")
       img(src="./assets/img/icons/phone.svg")
       span Заказать звонок
+
+include ../popup-call/popup-call
 
