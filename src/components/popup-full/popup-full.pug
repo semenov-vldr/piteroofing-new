@@ -1,0 +1,24 @@
+.popup-full.popup
+  .popup-full__content.popup__content
+    button.popup-full__close.popup__close
+      svg(width="14" height="14" stroke="#2C2C2C")
+        use(href='./assets/img/sprite.svg#close-icon')
+
+    h3.popup-full__title Оформление заявки
+
+    form.popup-full__form.popup__form(method='POST' action='' enctype="multipart/form-data" autocomplete="off")
+
+      +inputName
+      +inputTel
+      +selectExcursions
+      +format
+      +date
+      +count
+      +time
+
+      button.button--accent.popup-full__button.popup__button(type="submit") Записаться
+
+
+
+
+

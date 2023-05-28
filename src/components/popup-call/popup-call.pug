@@ -1,18 +1,15 @@
-.popup-call
-  .popup-call__content
-    button.popup-call__close X
+.popup-call.popup
+  .popup-call__content.popup__content
+    button.popup-call__close.popup__close
+      svg(width="14" height="14" stroke="#2C2C2C")
+        use(href='./assets/img/sprite.svg#close-icon')
 
-    form.popup-call__form(method='POST' action='' enctype="multipart/form-data" autocomplete="off")
+    form.popup-call__form.popup__form(method='POST' action='' enctype="multipart/form-data" autocomplete="off")
 
-      label
-        span Ваше имя
-        input(placeholder="Дмитрий")
+      +inputName
+      +inputTel
 
-      label
-        span Телефон
-        input(placeholder="+7 999 999 99 99")
-
-      button.popup-call__button(type="submit") Заказать звонок
+      button.button--accent.popup-call__button.popup__button(type="submit") Заказать звонок
 
 
 

@@ -2,56 +2,59 @@
 
 // Name
 mixin inputName
-  .feedback-form__input-container
-    input(placeholder="Иванов Иван Иванович*" name="name" pattern="^[A-Za-zА-Яа-яЁё\\s]+$" autocomplete='off' maxlength='40' required )
-    span.feedback-form__error
+  label.feedback-form__field.feedback-form__field--name
+    span Имя*
+    input(placeholder="Дмитрий" name="name" pattern="[A-Za-zA-Яа-яЁё]" autocomplete='off' maxlength='40' required )
 
 // Tel
 mixin inputTel
-  .feedback-form__input-container
-    input(type='tel' name='phone' placeholder="+7(___)___-__-__*" data-tel-input='' pattern='.{18,}' maxlength='18'  autocomplete='off' required )
-    span.feedback-form__error
+  label.feedback-form__field.feedback-form__field--tel
+    span Телефон*
+    input(type='tel' name='phone' placeholder="+7(___)___-__-__" data-tel-input='' pattern='.{18,}' maxlength='18'  autocomplete='off' required )
 
-// Email
-mixin inputEmail
-  .feedback-form__input-container
-    input(type='email' name="email" maxlength='40' placeholder="example@email.ru*" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required )
-    span.feedback-form__error
+
+mixin selectExcursions
+  label.feedback-form__field.feedback-form__field--selectExcursions
+    span Экскурсия
+    select(name="excursions")
+      option(value="Не выбрано") Не выбрано
+      option(value="По крышам") По крышам
+      option(value="Парадные и дворы, крыши") Парадные и дворы + крыши
+      option(value="По парадным и дворам + коммуналка") По парадным и дворам + коммуналка
+
+
+mixin format
+  label.feedback-form__field.feedback-form__field--format
+    span Формат экскурсии
+    select(name="format")
+      option(value="Не выбрано") Не выбрано
+      option(value="Групповая") Групповая (до 15 чел)
+      option(value="Индивидуальная") Индивидуальная (вы и гид)
+
+
+mixin date
+  label.feedback-form__field.feedback-form__field--date
+    span Дата экскурсии
+    input(type="date" name='date' placeholder="31.05.2023" autocomplete='off')
+
+// Count
+mixin count
+  label.feedback-form__field.feedback-form__field--count
+    span Сколько человек?
+    input(type="number" name='count' placeholder="2" autocomplete='off')
+
+
+mixin time
+  label.feedback-form__field.feedback-form__field--time
+    span Ориентировочное время
+    input( name='time' placeholder="15:00" autocomplete='off')
+
+
+
+
 
 // Text
 mixin inputText
   .feedback-form__input-container
-    textarea( placeholder="Пожалуйста, введите запрос*" name="message" maxlength='200' rows="4" required)
-    span.feedback-form__error
+    textarea( placeholder="Пожалуйста, введите запрос*" name="message" maxlength='200' rows="4")
 
-
-// Кнопка "отправить" и согласие
-mixin sending
-  .feedback-form__sending
-    label
-      input(type='checkbox' checked)
-      span.feedback-form__checkbox
-      span.feedback-form__agreement Даю согласие на обработку персональных данных
-    button.button.arrow.button--outline(type='submit') Отправить&nbsp;вопрос
-
-// шаблон прогресс-бара
-mixin upload-progress-template
-  template.upload-progress__template
-    .feedback-form__upload-progress.feedback-form-upload-progress
-      .feedback-form-upload-progress__line(data-progress)
-      .feedback-form-upload-progress__close(data-name)
-      span.feedback-form-upload-progress__name
-      span.feedback-form-upload-progress__size
-
-//--------------------------------
-
-  // breadcrumbs
-mixin breadcrumbs_icon
-  svg(width="7" height="6" fill='#fff')
-    use(href="./assets/img/sprite.svg#breadcrumbs")
-
-
-// карточка партнера
-mixin partnersItem(src)
-  li.partners__item
-    img.partners__logo(src=src)
