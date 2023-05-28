@@ -2,11 +2,8 @@
 <!-- ---- Form ------------>
 <!-- Name-->
 <!-- Tel-->
-<!-- Email-->
-<!-- Text-->
-<!-- Кнопка "отправить" и согласие-->
-<!-- шаблон прогресс-бара-->
-<!-- карточка партнера--><!DOCTYPE html>
+<!-- Count-->
+<!-- Text--><!DOCTYPE html>
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
@@ -40,17 +37,64 @@
           <button class="header__phone" type="button"><img src="./assets/img/icons/phone.svg"><span>Заказать звонок</span></button>
         </div>
       </header>
-      <div class="popup-call">
-        <div class="popup-call__content">
-          <button class="popup-call__close">X</button>
-          <form class="popup-call__form" method="POST" action="" enctype="multipart/form-data" autocomplete="off">
-            <label><span>Ваше имя</span>
-              <input placeholder="Дмитрий">
+      <div class="popup-call popup">
+        <div class="popup-call__content popup__content">
+          <button class="popup-call__close popup__close">
+            <svg width="14" height="14" stroke="#2C2C2C">
+              <use href="./assets/img/sprite.svg#close-icon"></use>
+            </svg>
+          </button>
+          <form class="popup-call__form popup__form" method="POST" action="" enctype="multipart/form-data" autocomplete="off">
+            <label class="feedback-form__field feedback-form__field--name"><span>Имя*</span>
+              <input placeholder="Дмитрий" name="name" pattern="[A-Za-zA-Яа-яЁё]" autocomplete="off" maxlength="40" required="required"/>
             </label>
-            <label><span>Телефон</span>
-              <input placeholder="+7 999 999 99 99">
+            <label class="feedback-form__field feedback-form__field--tel"><span>Телефон*</span>
+              <input type="tel" name="phone" placeholder="+7(___)___-__-__" data-tel-input="" pattern=".{18,}" maxlength="18" autocomplete="off" required="required"/>
             </label>
-            <button class="popup-call__button" type="submit">Заказать звонок</button>
+            <button class="button--accent popup-call__button popup__button" type="submit">Заказать звонок</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup-full popup">
+        <div class="popup-full__content popup__content">
+          <button class="popup-full__close popup__close">
+            <svg width="14" height="14" stroke="#2C2C2C">
+              <use href="./assets/img/sprite.svg#close-icon"></use>
+            </svg>
+          </button>
+          <h3 class="popup-full__title">Оформление заявки</h3>
+          <form class="popup-full__form popup__form" method="POST" action="" enctype="multipart/form-data" autocomplete="off">
+            <label class="feedback-form__field feedback-form__field--name"><span>Имя*</span>
+              <input placeholder="Дмитрий" name="name" pattern="[A-Za-zA-Яа-яЁё]" autocomplete="off" maxlength="40" required="required"/>
+            </label>
+            <label class="feedback-form__field feedback-form__field--tel"><span>Телефон*</span>
+              <input type="tel" name="phone" placeholder="+7(___)___-__-__" data-tel-input="" pattern=".{18,}" maxlength="18" autocomplete="off" required="required"/>
+            </label>
+            <label class="feedback-form__field feedback-form__field--selectExcursions"><span>Экскурсия</span>
+              <select name="excursions">
+                <option value="Не выбрано">Не выбрано</option>
+                <option value="По крышам">По крышам</option>
+                <option value="Парадные и дворы, крыши">Парадные и дворы + крыши</option>
+                <option value="По парадным и дворам + коммуналка">По парадным и дворам + коммуналка</option>
+              </select>
+            </label>
+            <label class="feedback-form__field feedback-form__field--format"><span>Формат экскурсии</span>
+              <select name="format">
+                <option value="Не выбрано">Не выбрано</option>
+                <option value="Групповая">Групповая (до 15 чел)</option>
+                <option value="Индивидуальная">Индивидуальная (вы и гид)</option>
+              </select>
+            </label>
+            <label class="feedback-form__field feedback-form__field--date"><span>Дата экскурсии</span>
+              <input type="date" name="date" placeholder="31.05.2023" autocomplete="off"/>
+            </label>
+            <label class="feedback-form__field feedback-form__field--count"><span>Сколько человек?</span>
+              <input type="number" name="count" placeholder="2" autocomplete="off"/>
+            </label>
+            <label class="feedback-form__field feedback-form__field--time"><span>Ориентировочное время</span>
+              <input name="time" placeholder="15:00" autocomplete="off"/>
+            </label>
+            <button class="button--accent popup-full__button popup__button" type="submit">Записаться</button>
           </form>
         </div>
       </div>
@@ -60,7 +104,7 @@
             <h1 class="hero__title">Прогулки по крышам Питера</h1>
             <p class="hero__subtitle">Незабываемые эмоции здесь!</p>
             <div class="hero__actions">
-              <button class="button button--accent hero__button hero__button--accent">Записаться</button><a class="button hero__button button--outline hero__button--telegram" href="##">Telegram</a><img class="hero__telegram" src="./assets/img/icons/social/telegram.svg">
+              <button class="button button--accent hero__button hero__button--accent js-popup-active">Записаться</button><a class="button hero__button button--outline hero__button--telegram" href="##">Telegram</a><img class="hero__telegram" src="./assets/img/icons/social/telegram.svg">
             </div>
           </div>
         </div>
