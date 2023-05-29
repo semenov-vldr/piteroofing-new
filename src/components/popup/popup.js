@@ -6,4 +6,6 @@ function activePopup (popup, classActive) {
 function inactivePopup (popup, classActive) {
   popup.classList.remove(classActive);
   unblockScrollBody();
+
+  popup.querySelector('form').reset();
 }

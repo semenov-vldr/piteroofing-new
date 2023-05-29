@@ -2,10 +2,18 @@
   background-color: $bg-black
   padding: 48px 0 16px
 
+  &__container
+    display: grid
+    grid-template-columns: auto auto
+    @media (max-width: 768px)
+      grid-template-rows: repeat(3, auto)
+
   &__menu
     display: flex
     gap: 96px
     font-weight: 500
+    @media (max-width: 768px)
+      grid-row: 2/span 1
     @media (max-width: 480px)
       flex-direction: column
       gap: 24px
@@ -34,10 +42,28 @@
     &--whatsapp::after
       background-image: url('../img/icons/social/whatsapp-footer.svg')
 
+  &__logo
+    margin-left: auto
+    align-self: center
+    grid-row: span 2
+    width: 170px
+    @media (max-width: $width-mobile)
+      width: 120px
+    @media (max-width: 768px)
+      grid-row: span 1
+      grid-column: span 1
+      margin-left: initial
+      margin-bottom: 48px
+    @media (max-width: 480px)
+      margin-bottom: 24px
+      width: 86px
+
   &__politics
     display: block
     margin-top: 114px
     font-size: 12px
+    @media (max-width: 768px)
+      grid-row: 3/span 1
     @media (max-width: 480px)
       margin-top: 32px
     &:hover

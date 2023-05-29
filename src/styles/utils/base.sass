@@ -75,7 +75,7 @@ main
 
 // Button
 .button
-  padding: 16px
+  padding: 8px 16px
   transition: $transition
   border: 1px solid transparent
   border-radius: 30px
@@ -83,6 +83,12 @@ main
   align-items: center
   justify-content: center
   cursor: pointer
+  min-height: 52px
+  min-width: 194px
+  font-weight: 600
+  @media (max-width: 768px)
+    min-height: 40px
+    min-width: 132px
   &--accent
     background-color: $accent
     color: $bg-grey
