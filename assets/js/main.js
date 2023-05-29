@@ -11,6 +11,7 @@
 
 }
 
+
 {
 
   let mySwiper;
@@ -117,6 +118,8 @@ function activePopup (popup, classActive) {
 function inactivePopup (popup, classActive) {
   popup.classList.remove(classActive);
   unblockScrollBody();
+
+  popup.querySelector('form').reset();
 }
 
 const popupCall = document.querySelector(".popup-call");
@@ -176,8 +179,6 @@ if (popupFull) {
   closePopupFull.addEventListener('click', () => {
     inactivePopup (popupFull, classActivePopupFull);
   })
-
-
 
 
 }
