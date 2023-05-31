@@ -27,11 +27,11 @@
           <button class="header__burger"><span class="header__burger-line"></span><span class="header__burger-line"></span><span class="header__burger-line"></span></button>
           <nav class="header__nav"><img class="header__nav-arrow" src="./assets/img/icons/arrow_forward.svg">
             <ul class="header__nav-list">
-              <li class="header__nav-item"><a class="header__nav-link" href="##">Экскурсии</a></li>
-              <li class="header__nav-item"><a class="header__nav-link" href="##">Фотогалерея</a></li>
-              <li class="header__nav-item"><a class="header__nav-link" href="##">Отзывы</a></li>
-              <li class="header__nav-item"><a class="header__nav-link" href="##">FAQ</a></li>
-              <li class="header__nav-item"><a class="header__nav-link" href="##">Контакты</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="index.html#excursions">Экскурсии</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#gallery">Фотогалерея</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#reviews">Отзывы</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#faq">FAQ</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#contacts">Контакты</a></li>
             </ul>
           </nav>
           <button class="header__phone" type="button"><img src="./assets/img/icons/phone.svg"><span>Заказать звонок</span></button>
@@ -99,15 +99,15 @@
         </div>
       </div>
       <main>
-        <div class="desc">
+        <section class="desc">
           <div class="desc__container container">
             <h1 class="desc__title">Групповая экскурсия по крышам</h1>
             <div class="desc__content">
               <div class="desc__slider swiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="./assets/img/gallery/index/01.jpg"></div>
-                  <div class="swiper-slide"><img src="./assets/img/gallery/index/02.jpg"></div>
-                  <div class="swiper-slide"><img src="./assets/img/gallery/index/03.jpg"></div>
+                  <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/index/01.jpg"></div>
+                  <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/index/02.jpg"></div>
+                  <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/index/03.jpg"></div>
                 </div>
                 <div class="swiper-navigation">
                   <div class="slider-nav__prev"></div>
@@ -116,7 +116,7 @@
                 <div class="swiper-pagination"></div>
               </div>
               <div class="desc__price">
-                <h2 class="desc__price-title"></h2>
+                <h2 class="desc__price-title">Цены</h2>
                 <ul class="desc__price-list">
                   <li class="desc__price-item">800₽ в составе группы до 15 человек</li>
                   <li class="desc__price-item">1300₽ Индивидуальная для 4-8 человек</li>
@@ -128,10 +128,10 @@
             </div>
             <p class="desc__text">Экскурсии по крышам — возможность открыть новые горизонты, обрести другой вгляд на привычный город, гид расскажет вам много интересных фактов о городе. Вы сможете сделать снимки, которые сохранят воспоминания об этом моменте.</p>
           </div>
-        </div>
-        <div class="reviews">
+        </section>
+        <div class="reviews" id="reviews">
           <div class="reviews__container container">
-            <h2 class="title-section">Фотогалерея</h2>
+            <h2 class="title-section">Отзывы</h2>
             <div class="reviews__slider swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="./assets/img/reviews/01.jpg"></div>
@@ -143,10 +143,11 @@
               <!--  .slider-nav__next-->
               <div class="swiper-pagination"></div>
             </div>
+            <button class="reviews__button button button--accent js-popup-active">Записаться</button>
           </div>
         </div>
         <!-- пример разметки-->
-        <div class="accordion">
+        <div class="accordion" id="faq">
           <div class="accordion__container container">
             <h2 class="title-section">Часто задаваемые вопросы</h2>
             <ol class="accordion__list">
@@ -213,14 +214,14 @@
           <div class="footer__menu">
             <nav class="footer__nav">
               <ul class="footer__nav-list">
-                <li class="footer__nav-item"><a class="footer__nav-link" href="##">Экскурсии</a></li>
-                <li class="footer__nav-item"><a class="footer__nav-link" href="##">Фотогалерея</a></li>
-                <li class="footer__nav-item"><a class="footer__nav-link" href="##">Отзывы</a></li>
-                <li class="footer__nav-item"><a class="footer__nav-link" href="##">FAQ</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#excursions">Экскурсии</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#gallery">Фотогалерея</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="reviews">Отзывы</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#faq">FAQ</a></li>
               </ul>
             </nav>
             <ul class="footer__contacts">
-              <li class="footer__contacts-title">Контакты</li>
+              <li class="footer__contacts-title" id="contacts">Контакты</li>
               <li class="footer__contacts-item"><a class="footer__contacts-link" href="tel:+79255536220">+7 925 553 62 20</a></li>
               <li class="footer__contacts-item"><a class="footer__contacts-link footer__contacts-link--telegram" href="tel:+79255536220">Телеграм</a></li>
               <li class="footer__contacts-item"><a class="footer__contacts-link footer__contacts-link--whatsapp" href="tel:+79255536220">WhatsApp</a></li>

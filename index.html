@@ -27,11 +27,11 @@
           <button class="header__burger"><span class="header__burger-line"></span><span class="header__burger-line"></span><span class="header__burger-line"></span></button>
           <nav class="header__nav"><img class="header__nav-arrow" src="./assets/img/icons/arrow_forward.svg">
             <ul class="header__nav-list">
-              <li class="header__nav-item"><a class="header__nav-link" href="##">Экскурсии</a></li>
-              <li class="header__nav-item"><a class="header__nav-link" href="##">Фотогалерея</a></li>
-              <li class="header__nav-item"><a class="header__nav-link" href="##">Отзывы</a></li>
-              <li class="header__nav-item"><a class="header__nav-link" href="##">FAQ</a></li>
-              <li class="header__nav-item"><a class="header__nav-link" href="##">Контакты</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="index.html#excursions">Экскурсии</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#gallery">Фотогалерея</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#reviews">Отзывы</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#faq">FAQ</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#contacts">Контакты</a></li>
             </ul>
           </nav>
           <button class="header__phone" type="button"><img src="./assets/img/icons/phone.svg"><span>Заказать звонок</span></button>
@@ -108,7 +108,7 @@
             </div>
           </div>
         </div>
-        <div class="excursions">
+        <div class="excursions" id="excursions">
           <div class="excursions__container container">
             <h2 class="excursions__title title-section">Экскурсии</h2>
             <div class="excursions__list"><a class="excursions__item excursions-item" href="group.html"><img class="excursions-item__img" src="./assets/img/excursions/01.jpg">
@@ -120,7 +120,7 @@
                 <h3 class="excursions-item__title">Фотосессия на крыше</h3><span class="excursions-item__price">4500 ₽</span></a></div>
           </div>
         </div>
-        <div class="gallery">
+        <div class="gallery" id="gallery">
           <div class="gallery__container container">
             <h2 class="title-section">Фотогалерея</h2>
             <div class="gallery__slider swiper">
@@ -154,12 +154,12 @@
                 <p class="steps__desc">Вас встретит гид и покажет вам город с другого ракурса</p>
               </li>
             </ul>
-            <button class="steps__button button button--accent hero__button hero__button--accent">Записаться</button>
+            <button class="steps__button button button--accent js-popup-active">Записаться</button>
           </div>
         </div>
-        <div class="reviews">
+        <div class="reviews" id="reviews">
           <div class="reviews__container container">
-            <h2 class="title-section">Фотогалерея</h2>
+            <h2 class="title-section">Отзывы</h2>
             <div class="reviews__slider swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="./assets/img/reviews/01.jpg"></div>
@@ -171,10 +171,11 @@
               <!--  .slider-nav__next-->
               <div class="swiper-pagination"></div>
             </div>
+            <button class="reviews__button button button--accent js-popup-active">Записаться</button>
           </div>
         </div>
         <!-- пример разметки-->
-        <div class="accordion">
+        <div class="accordion" id="faq">
           <div class="accordion__container container">
             <h2 class="title-section">Часто задаваемые вопросы</h2>
             <ol class="accordion__list">
@@ -241,14 +242,14 @@
           <div class="footer__menu">
             <nav class="footer__nav">
               <ul class="footer__nav-list">
-                <li class="footer__nav-item"><a class="footer__nav-link" href="##">Экскурсии</a></li>
-                <li class="footer__nav-item"><a class="footer__nav-link" href="##">Фотогалерея</a></li>
-                <li class="footer__nav-item"><a class="footer__nav-link" href="##">Отзывы</a></li>
-                <li class="footer__nav-item"><a class="footer__nav-link" href="##">FAQ</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#excursions">Экскурсии</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#gallery">Фотогалерея</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="reviews">Отзывы</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#faq">FAQ</a></li>
               </ul>
             </nav>
             <ul class="footer__contacts">
-              <li class="footer__contacts-title">Контакты</li>
+              <li class="footer__contacts-title" id="contacts">Контакты</li>
               <li class="footer__contacts-item"><a class="footer__contacts-link" href="tel:+79255536220">+7 925 553 62 20</a></li>
               <li class="footer__contacts-item"><a class="footer__contacts-link footer__contacts-link--telegram" href="tel:+79255536220">Телеграм</a></li>
               <li class="footer__contacts-item"><a class="footer__contacts-link footer__contacts-link--whatsapp" href="tel:+79255536220">WhatsApp</a></li>

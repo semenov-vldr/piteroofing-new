@@ -11,6 +11,39 @@
 
 }
 
+new Swiper('.desc__slider', {
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false,
+  // },
+
+  // Откл функционала, если слайдов меньше, чем нужно
+  watchOverflow: true,
+
+  //centeredSlides: true,
+
+  slidesPerView: 1,
+
+  effect: "fade",
+
+  // Отступ между слайдами
+  spaceBetween: 16,
+
+  //slideClass: 'event-header__slide',
+
+  // Стартовый слайд
+  initialSlide: 0,
+
+  loop: true,
+
+
+
+});
 
 {
 
@@ -81,10 +114,7 @@
         image.setAttribute('data-fancybox', "gallery");
       });
 
-
-
     })
-
 
 
   };
@@ -98,13 +128,22 @@ const burger = header.querySelector('.header__burger');
 
 burger.addEventListener('click', () => {
   header.classList.add('js-menu-open');
-})
+  blockScrollBody();
+});
 
 const headerArrow = header.querySelector('.header__nav-arrow');
-
 headerArrow.addEventListener('click', () => {
   header.classList.remove('js-menu-open');
-})
+  unblockScrollBody();
+});
+
+const navLinks = header.querySelectorAll('.header__nav-link');
+navLinks.forEach(navLink => {
+  navLink.addEventListener('click', () => {
+    header.classList.remove('js-menu-open');
+    unblockScrollBody();
+  })
+});
 
 
 // scroll
