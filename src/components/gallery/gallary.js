@@ -67,10 +67,7 @@
         image.setAttribute('data-fancybox', "gallery");
       });
 
-
-
     })
-
 
 
   };

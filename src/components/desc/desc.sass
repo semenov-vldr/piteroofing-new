@@ -1,0 +1,33 @@
+.desc
+  padding-top: 120px
+  @media (max-width: 980px)
+    padding-top: 90px
+
+  &__container
+
+  &__title
+
+  &__content
+    display: grid
+    grid-template-columns: 60% 1fr
+
+
+  &__slider
+    grid-column: 1/2
+    height: 380px
+    @media (max-width: 768px)
+      height: 300px
+    @media (max-width: 480px)
+      height: 250px
+    @media (max-width: 400px)
+      height: 190px
+
+  &__slide
+    overflow: hidden
+    border-radius: 6px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+
