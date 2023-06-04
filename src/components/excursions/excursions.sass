@@ -12,6 +12,8 @@
     text-align: center
     display: flex
     flex-direction: column
+    &:hover img
+      opacity: 0.7
 
     &__img
       width: 100%
@@ -21,6 +23,7 @@
       max-width: 380px
       max-height: 380px
       border-radius: 16px
+      transition: $transition
 
     &__title
       @include fontSize(12, 20)

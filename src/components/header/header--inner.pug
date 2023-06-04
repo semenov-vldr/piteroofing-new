@@ -1,4 +1,4 @@
-header.header
+header.header.header--inner
   .header__container.container
 
     a.header__logo(href="index.html")
@@ -25,9 +25,13 @@ header.header
         li.header__nav-item
           a.header__nav-link(href="#contacts") Контакты
 
+
     button.header__phone(type="button")
       img(src="./assets/img/icons/phone.svg")
       span Заказать звонок
+
+    a.header__back(href="/")
+      img(src="./assets/img/icons/arrow_forward.svg")
 
 include ../popup-call/popup-call
 include ../popup-full/popup-full
