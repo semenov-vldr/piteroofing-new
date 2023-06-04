@@ -4,6 +4,11 @@ new Swiper('.desc__slider', {
     clickable: true,
   },
 
+  navigation: {
+    prevEl: '.slider-nav__prev',
+    nextEl: '.slider-nav__next',
+  },
+
   // autoplay: {
   //   delay: 3000,
   //   disableOnInteraction: false,
