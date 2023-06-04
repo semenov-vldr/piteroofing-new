@@ -17,6 +17,11 @@ new Swiper('.desc__slider', {
     clickable: true,
   },
 
+  navigation: {
+    prevEl: '.slider-nav__prev',
+    nextEl: '.slider-nav__next',
+  },
+
   // autoplay: {
   //   delay: 3000,
   //   disableOnInteraction: false,
@@ -280,17 +285,17 @@ if (popupFull) {
           },
 
           480: {
-            slidesPerView: 1.5,
+            slidesPerView: 2,
           },
 
 
           768: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 32,
           },
 
           1100: {
-            slidesPerView: 2.5,
+            slidesPerView: 3,
             spaceBetween: 40,  // 24
           },
         }
