@@ -1,19 +1,16 @@
-.excursions
+.others
+
+  &__container
+    overflow: hidden
 
   &__list
-    display: grid
-    grid-template-columns: repeat(3, 1fr)
-    grid-gap: 32px
-    @media (max-width: 768px)
-      grid-template-columns: repeat(2, 1fr)
-      grid-gap: 16px
+    display: flex
+    gap: 32px
+    overflow-x: scroll
 
   &-item
-    text-align: center
     display: flex
     flex-direction: column
-    &:hover img
-      opacity: 0.7
 
     &__img
       width: 100%
@@ -22,14 +19,16 @@
       aspect-ratio: 1 / 1
       max-width: 380px
       max-height: 380px
+      min-width: 250px
+      min-height: 250px
       border-radius: 16px
       transition: $transition
+      @media (max-width: 768px)
+        min-width: 160px
+        min-height: 160px
 
     &__title
       @include fontSize(12, 20)
       margin: 24px 0 12px
       @media (max-width: 768px)
         margin: 8px 0
-
-    &__price
-      @include fontSize(16, 24)
