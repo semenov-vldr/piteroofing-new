@@ -18,7 +18,8 @@
     <link rel="stylesheet" type="text/css" href="assets/css/main.css"><!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
 <!-- Yandex map script -->
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=dad86943-dfef-45bd-9c5e-c404323cb093&amp;lang=ru_RU" type="text/javascript"></script>
+    <!--script(src="https://api-maps.yandex.ru/2.1/?apikey=dad86943-dfef-45bd-9c5e-c404323cb093&lang=ru_RU" type="text/javascript")-->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="page">
@@ -46,10 +47,12 @@
           </button>
           <form class="popup-call__form popup__form" method="POST" action="" enctype="multipart/form-data" autocomplete="off">
             <label class="feedback-form__field feedback-form__field--name"><span>Имя*</span>
-              <input placeholder="Дмитрий" name="name" pattern="[A-Za-zA-Яа-яЁё]" autocomplete="off" maxlength="40" required="required"/>
+              <!--input(placeholder="Дмитрий" name="name" pattern="[A-Za-zA-Яа-яЁё]" autocomplete='off' maxlength='40' required )-->
+              <input placeholder="Дмитрий" name="name" autocomplete="off" maxlength="40"/>
             </label>
             <label class="feedback-form__field feedback-form__field--tel"><span>Телефон*</span>
-              <input type="tel" name="phone" placeholder="+7(___)___-__-__" data-tel-input="" pattern=".{18,}" maxlength="18" autocomplete="off" required="required"/>
+              <input type="tel" name="phone" placeholder="+7(___)___-__-__" data-tel-input="" maxlength="18" autocomplete="off"/>
+              <!-- pattern='.{18,}'-->
             </label>
             <button class="button--accent popup-call__button popup__button" type="submit">Заказать звонок</button>
           </form>
@@ -65,10 +68,12 @@
           <h3 class="popup-full__title">Оформление заявки</h3>
           <form class="popup-full__form popup__form" method="POST" action="" enctype="multipart/form-data" autocomplete="off">
             <label class="feedback-form__field feedback-form__field--name"><span>Имя*</span>
-              <input placeholder="Дмитрий" name="name" pattern="[A-Za-zA-Яа-яЁё]" autocomplete="off" maxlength="40" required="required"/>
+              <!--input(placeholder="Дмитрий" name="name" pattern="[A-Za-zA-Яа-яЁё]" autocomplete='off' maxlength='40' required )-->
+              <input placeholder="Дмитрий" name="name" autocomplete="off" maxlength="40"/>
             </label>
             <label class="feedback-form__field feedback-form__field--tel"><span>Телефон*</span>
-              <input type="tel" name="phone" placeholder="+7(___)___-__-__" data-tel-input="" pattern=".{18,}" maxlength="18" autocomplete="off" required="required"/>
+              <input type="tel" name="phone" placeholder="+7(___)___-__-__" data-tel-input="" maxlength="18" autocomplete="off"/>
+              <!-- pattern='.{18,}'-->
             </label>
             <label class="feedback-form__field feedback-form__field--selectExcursions"><span>Экскурсия</span>
               <select name="excursions">
@@ -99,15 +104,51 @@
         </div>
       </div>
       <main>
+        <!--section.desc-->
+        <!--  .desc__container.container-->
+        <!--    h1.desc__title Групповая экскурсия по крышам-->
+        <!---->
+        <!--    .desc__content-->
+        <!--      .desc__slider.swiper-->
+        <!--        .swiper-wrapper-->
+        <!--          .swiper-slide.desc__slide-->
+        <!--            img(src="./assets/img/gallery/index/01.jpg")-->
+        <!--          .swiper-slide.desc__slide-->
+        <!--            img(src="./assets/img/gallery/index/02.jpg")-->
+        <!--          .swiper-slide.desc__slide-->
+        <!--            img(src="./assets/img/gallery/index/03.jpg")-->
+        <!---->
+        <!--        .swiper-navigation-->
+        <!--          .slider-nav__prev-->
+        <!--          .slider-nav__next-->
+        <!--        .swiper-pagination-->
+        <!---->
+        <!--      .desc__price-->
+        <!--        h3.desc__price-title Цены-->
+        <!--        ul.desc__price-list-->
+        <!--          li.desc__price-item 800₽* - В составе группы до 15 человек-->
+        <!--          li.desc__price-item 1300₽* - Индивидуальная для 4-8 человек-->
+        <!--          li.desc__price-item 1400₽* - Индивидуальная для 2-3 человек-->
+        <!--        .desc__price-note *цена за 1 человека-->
+        <!---->
+        <!--      button.button.button--accent.desc__button.js-popup-active Записаться-->
+        <!---->
+        <!--      p.desc__text Экскурсии по крышам — возможность открыть новые горизонты, обрести другой вгляд на привычный город, гид расскажет вам много интересных фактов о городе. Вы сможете сделать снимки, которые сохранят воспоминания об этом моменте.-->
+        <!---->
+        <!--      include ../schedule/schedule-->
+        <!---->
+        <!--      .desc__meet-->
+        <!--        h3.desc__meet-title Место встречи-->
+        <!--        p.desc__meet-text Рядом со станцией метро Адмиралтейская-->
         <section class="desc">
           <div class="desc__container container">
             <h1 class="desc__title">Групповая экскурсия по крышам</h1>
             <div class="desc__content">
               <div class="desc__slider swiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/index/01.jpg"></div>
-                  <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/index/02.jpg"></div>
-                  <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/index/03.jpg"></div>
+                  <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/index/01.jpg"/></div>
+                  <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/index/02.jpg"/></div>
+                  <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/index/03.jpg"/></div>
                 </div>
                 <div class="swiper-navigation">
                   <div class="slider-nav__prev"></div>
@@ -268,8 +309,8 @@
             <ul class="footer__contacts">
               <li class="footer__contacts-title" id="contacts">Контакты</li>
               <li class="footer__contacts-item"><a class="footer__contacts-link" href="tel:+79255536220">+7 925 553 62 20</a></li>
-              <li class="footer__contacts-item"><a class="footer__contacts-link footer__contacts-link--telegram" href="tel:+79255536220">Телеграм</a></li>
-              <li class="footer__contacts-item"><a class="footer__contacts-link footer__contacts-link--whatsapp" href="tel:+79255536220">WhatsApp</a></li>
+              <li class="footer__contacts-item"><a class="footer__contacts-link footer__contacts-link--telegram" href="https://t.me/sinceresv">Телеграм</a></li>
+              <li class="footer__contacts-item"><a class="footer__contacts-link footer__contacts-link--whatsapp" href="https://wa.me/79255536220">WhatsApp</a></li>
             </ul>
           </div><img class="footer__logo" src="./assets/img/icons/logo.svg"><a class="footer__politics" href="##">Политика конфиденциальности</a>
         </div>

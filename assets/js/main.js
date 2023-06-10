@@ -129,30 +129,42 @@ new Swiper('.desc__slider', {
 
 const header = document.querySelector('header.header');
 
-const burger = header.querySelector('.header__burger');
+if (header) {
 
-burger.addEventListener('click', () => {
-  header.classList.add('js-menu-open');
-  blockScrollBody();
-});
+  const burger = header.querySelector('.header__burger');
 
-const headerArrow = header.querySelector('.header__nav-arrow');
-headerArrow.addEventListener('click', () => {
-  header.classList.remove('js-menu-open');
-  unblockScrollBody();
-});
+  burger.addEventListener('click', () => {
+    header.classList.add('js-menu-open');
+    blockScrollBody();
 
-const navLinks = header.querySelectorAll('.header__nav-link');
-navLinks.forEach(navLink => {
-  navLink.addEventListener('click', () => {
+    //swipe
+    if (header.classList.contains('js-menu-open')) {
+      let mc = new Hammer(header);
+      mc.on('swipeleft', closeMobileMenu);
+    }
+  });
+
+  function closeMobileMenu () {
     header.classList.remove('js-menu-open');
     unblockScrollBody();
-  })
-});
+  };
+
+  const headerArrow = header.querySelector('.header__nav-arrow');
+  headerArrow.addEventListener('click', closeMobileMenu);
+
+  const navLinks = header.querySelectorAll('.header__nav-link');
+  navLinks.forEach(navLink => {
+    navLink.addEventListener('click', closeMobileMenu);
+  });
 
 
 // scroll
-window.addEventListener('scroll', () => scrollHeader (header) );
+  window.addEventListener('scroll', () => scrollHeader (header) );
+
+
+}
+
+
 
 function activePopup (popup, classActive) {
   popup.classList.add(classActive);
@@ -228,6 +240,61 @@ if (popupFull) {
 }
 
 
+
+{
+
+  // Подключить axios.min.js в шаблоне
+
+  const TOKEN = "6031545253:AAHPW5wVsvWNQoCWuLIstUvjHCbKPkbUC3c";
+  const CHAT_ID = "-1001818251069";
+  const URL_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
+
+
+  const formFull = popupFull.querySelector('.popup-full__form');
+
+  if (formFull) formFull.addEventListener('submit', sendMsgTelegram);
+
+
+  function sendMsgTelegram (evt) {
+    evt.preventDefault();
+
+    let message = `<b>Заявка с сайта SPB</b>\n`;
+
+    message += `<b>Имя отправителя:</b> ${ this.name.value }\n`;
+    message += `<b>Телефон:</b> ${ this.phone.value }\n`;
+    message += `<b>Экскурсия:</b> ${ this.excursions.value }\n`;
+    message += `<b>Формат:</b> ${ this.format.value }\n`;
+    message += `<b>Дата:</b> ${ this.date.value }\n`;
+    message += `<b>Кол-во чел:</b> ${ this.count.value }\n`;
+    message += `<b>Время:</b> ${ this.time.value }\n`;
+
+    //message += `<b>Сообщение:</b> ${ this.message.value }\n`;
+
+    axios.post(URL_API, {
+      chat_id: CHAT_ID,
+      parse_mode: 'html',
+      text: message,
+    })
+      .then(() => {
+        console.log('Заявка успешно отправлена');
+      })
+      .catch((err) => {
+        console.warn(err);
+      })
+      .finally(() => {
+        console.log('Конец');
+      });
+
+
+    inactivePopup (popupFull, 'js-popup-full-active');
+
+    alert('Успешно')
+
+  };
+
+
+
+}
 
 {
 
@@ -320,6 +387,53 @@ if (popupFull) {
 
 }
 
+const errorAlert = document.querySelector('.error');
+
+if (errorAlert) {
+
+  const closeError = errorAlert.querySelector('.error__button');
+
+  closeError.addEventListener('click', () => {
+    errorAlert.classList.add('js-error-close');
+  })
+
+}
+
+
+
+const successAlert = document.querySelector('.success');
+
+if (successAlert) {
+
+  const closeSuccess = successAlert.querySelector('.success__button');
+
+  closeSuccess.addEventListener('click', () => {
+    successAlert.classList.add('js-success-close');
+  })
+
+}
+
+
+
+function alertSuccessCreate (alert) {
+
+  //const alert = document.querySelector('.error');
+
+  if (errorAlert) {
+
+    const closeError = errorAlert.querySelector('.error__button');
+
+    closeError.addEventListener('click', () => {
+      errorAlert.classList.add('js-error-close');
+    })
+
+  }
+
+
+
+
+}
+
 
 const html = document.querySelector('html');
 
@@ -366,12 +480,12 @@ const onPhoneInput = (evt) => {
 
   if ( ["7", "8", "9"].indexOf(inputNumbersValue[0]) > -1 ) {
     // Российские номера
-    if (inputNumbersValue[0] == "9") inputNumbersValue = "7" + inputNumbersValue;
-    let firstSymbols = (inputNumbersValue[0] == "8") ? "8" : "+7";
+    if (inputNumbersValue[0] === "9") inputNumbersValue = "7" + inputNumbersValue;
+    let firstSymbols = (inputNumbersValue[0] === "8") ? "8" : "+7";
     formattedInputValue = firstSymbols + " ";
 
-    if (inputNumbersValue[0] == "8") {
-      phoneInputs[0].setAttribute("pattern", ".{17,}");
+    if (inputNumbersValue[0] === "8") {
+      //phoneInputs[0].setAttribute("pattern", ".{17,}");
       console.log(phoneInputs[0].getAttribute("pattern"));
     }
 
@@ -400,7 +514,7 @@ const onPhoneInput = (evt) => {
 // Стирание первого символа
 const onPhoneKeyDown = (evt) => {
   const input = evt.target;
-  if (evt.keyCode == 8 && getInputNumbersValue(input).length == 1) {
+  if (evt.keyCode === 8 && getInputNumbersValue(input).length === 1) {
     input.value = "";
   }
 };
