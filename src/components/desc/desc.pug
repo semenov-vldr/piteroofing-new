@@ -1,40 +1,70 @@
-section.desc
-  .desc__container.container
-    h1.desc__title Групповая экскурсия по крышам
+//section.desc
+//  .desc__container.container
+//    h1.desc__title Групповая экскурсия по крышам
+//
+//    .desc__content
+//      .desc__slider.swiper
+//        .swiper-wrapper
+//          .swiper-slide.desc__slide
+//            img(src="./assets/img/gallery/index/01.jpg")
+//          .swiper-slide.desc__slide
+//            img(src="./assets/img/gallery/index/02.jpg")
+//          .swiper-slide.desc__slide
+//            img(src="./assets/img/gallery/index/03.jpg")
+//
+//        .swiper-navigation
+//          .slider-nav__prev
+//          .slider-nav__next
+//        .swiper-pagination
+//
+//      .desc__price
+//        h3.desc__price-title Цены
+//        ul.desc__price-list
+//          li.desc__price-item 800₽* - В составе группы до 15 человек
+//          li.desc__price-item 1300₽* - Индивидуальная для 4-8 человек
+//          li.desc__price-item 1400₽* - Индивидуальная для 2-3 человек
+//        .desc__price-note *цена за 1 человека
+//
+//      button.button.button--accent.desc__button.js-popup-active Записаться
+//
+//      p.desc__text Экскурсии по крышам — возможность открыть новые горизонты, обрести другой вгляд на привычный город, гид расскажет вам много интересных фактов о городе. Вы сможете сделать снимки, которые сохранят воспоминания об этом моменте.
+//
+//      include ../schedule/schedule
+//
+//      .desc__meet
+//        h3.desc__meet-title Место встречи
+//        p.desc__meet-text Рядом со станцией метро Адмиралтейская
 
-    .desc__content
-      .desc__slider.swiper
-        .swiper-wrapper
 
-          .swiper-slide.desc__slide
-            img(src="./assets/img/gallery/index/01.jpg")
 
-          .swiper-slide.desc__slide
-            img(src="./assets/img/gallery/index/02.jpg")
+-
+  const descGroup = {
+    title: 'Групповая экскурсия по крышам',
+    slides: [ './assets/img/gallery/index/01.jpg',
+              './assets/img/gallery/index/02.jpg',
+              './assets/img/gallery/index/03.jpg' ],
 
-          .swiper-slide.desc__slide
-            img(src="./assets/img/gallery/index/03.jpg")
+    prices: [ '800₽* - В составе группы до 15 человек',
+              '1300₽* - Индивидуальная для 4-8 человек',
+              '1400₽* - Индивидуальная для 2-3 человек' ],
 
-        .swiper-navigation
-          .slider-nav__prev
-          .slider-nav__next
+    descText: 'Экскурсии по крышам — возможность открыть новые горизонты, обрести другой вгляд на привычный город, гид расскажет вам много интересных фактов о городе. Вы сможете сделать снимки, которые сохранят воспоминания об этом моменте.',
+    meetText: 'Рядом со станцией метро Адмиралтейская'
+  }
 
-        .swiper-pagination
 
-      .desc__price
-        h3.desc__price-title Цены
-        ul.desc__price-list
-          li.desc__price-item 800₽* - В составе группы до 15 человек
-          li.desc__price-item 1300₽* - Индивидуальная для 4-8 человек
-          li.desc__price-item 1400₽* - Индивидуальная для 2-3 человек
-        .desc__price-note *цена за 1 человека
 
-      button.button.button--accent.desc__button.js-popup-active Записаться
++descExc (descGroup)
 
-      p.desc__text Экскурсии по крышам — возможность открыть новые горизонты, обрести другой вгляд на привычный город, гид расскажет вам много интересных фактов о городе. Вы сможете сделать снимки, которые сохранят воспоминания об этом моменте.
 
-      include ../schedule/schedule
 
-      .desc__meet
-        h3.desc__meet-title Место встречи
-        p.desc__meet-text Рядом со станцией метро Адмиралтейская
+
+
+
+
+
+
+
+
+
+

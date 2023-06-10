@@ -4,13 +4,17 @@
 mixin inputName
   label.feedback-form__field.feedback-form__field--name
     span Имя*
-    input(placeholder="Дмитрий" name="name" pattern="[A-Za-zA-Яа-яЁё]" autocomplete='off' maxlength='40' required )
+    //input(placeholder="Дмитрий" name="name" pattern="[A-Za-zA-Яа-яЁё]" autocomplete='off' maxlength='40' required )
+    input(placeholder="Дмитрий" name="name" autocomplete='off' maxlength='40')
+
 
 // Tel
 mixin inputTel
   label.feedback-form__field.feedback-form__field--tel
     span Телефон*
-    input(type='tel' name='phone' placeholder="+7(___)___-__-__" data-tel-input='' pattern='.{18,}' maxlength='18'  autocomplete='off' required )
+    input(type='tel' name='phone' placeholder="+7(___)___-__-__" data-tel-input='' maxlength='18'  autocomplete='off')
+
+    // pattern='.{18,}'
 
 
 mixin selectExcursions
@@ -37,6 +41,7 @@ mixin date
     span Дата экскурсии
     input(type="date" name='date' placeholder="31.05.2023" autocomplete='off')
 
+
 // Count
 mixin count
   label.feedback-form__field.feedback-form__field--count
@@ -49,12 +54,47 @@ mixin time
     span Ориентировочное время
     input( name='time' placeholder="15:00" autocomplete='off')
 
-
-
-
+//----------------
 
 // Text
 mixin inputText
   .feedback-form__input-container
     textarea( placeholder="Пожалуйста, введите запрос*" name="message" maxlength='200' rows="4")
+
+
+
+
+mixin descExc(descData)
+  section.desc
+    .desc__container.container
+      h1.desc__title=descData.title
+
+      .desc__content
+        .desc__slider.swiper
+          .swiper-wrapper
+            each slide in descData.slides
+              .swiper-slide.desc__slide
+                img(src=slide)
+
+          .swiper-navigation
+            .slider-nav__prev
+            .slider-nav__next
+          .swiper-pagination
+
+        .desc__price
+          h3.desc__price-title Цены
+          ul.desc__price-list
+            each price in descData.prices
+              li.desc__price-item=price
+          .desc__price-note *цена за 1 человека
+
+        button.button.button--accent.desc__button.js-popup-active Записаться
+
+        p.desc__text=descData.descText
+
+        include ./schedule/schedule
+
+        .desc__meet
+          h3.desc__meet-title Место встречи
+          p.desc__meet-text=descData.meetText
 

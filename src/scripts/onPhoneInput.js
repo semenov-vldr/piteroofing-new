@@ -22,12 +22,12 @@ const onPhoneInput = (evt) => {
 
   if ( ["7", "8", "9"].indexOf(inputNumbersValue[0]) > -1 ) {
     // Российские номера
-    if (inputNumbersValue[0] == "9") inputNumbersValue = "7" + inputNumbersValue;
-    let firstSymbols = (inputNumbersValue[0] == "8") ? "8" : "+7";
+    if (inputNumbersValue[0] === "9") inputNumbersValue = "7" + inputNumbersValue;
+    let firstSymbols = (inputNumbersValue[0] === "8") ? "8" : "+7";
     formattedInputValue = firstSymbols + " ";
 
-    if (inputNumbersValue[0] == "8") {
-      phoneInputs[0].setAttribute("pattern", ".{17,}");
+    if (inputNumbersValue[0] === "8") {
+      //phoneInputs[0].setAttribute("pattern", ".{17,}");
       console.log(phoneInputs[0].getAttribute("pattern"));
     }
 
@@ -56,7 +56,7 @@ const onPhoneInput = (evt) => {
 // Стирание первого символа
 const onPhoneKeyDown = (evt) => {
   const input = evt.target;
-  if (evt.keyCode == 8 && getInputNumbersValue(input).length == 1) {
+  if (evt.keyCode === 8 && getInputNumbersValue(input).length === 1) {
     input.value = "";
   }
 };

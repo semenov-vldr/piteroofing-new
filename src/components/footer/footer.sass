@@ -10,13 +10,11 @@
 
   &__menu
     display: flex
-    gap: 96px
+    gap: 24px 96px
+    flex-wrap: wrap
     font-weight: 500
     @media (max-width: 768px)
-      grid-row: 2/span 1
-    @media (max-width: 480px)
-      flex-direction: column
-      gap: 24px
+      grid-row: 2 / span 1
 
   &__nav-list,
   &__contacts
