@@ -96,12 +96,30 @@ main
     &:hover
       background-color: #C16F6C
   &--outline
+    position: relative
     border-color: $accent
     color: $white
     background: transparent
-    &:hover
+    overflow: hidden
+    &::after
+      content: ""
+      display: block
+      opacity: 0
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
       background: linear-gradient(90deg, rgba(255,147,143,1) 0%, rgba(255,200,198,1) 100%)
+      z-index: -100
+      border-radius: 30px
+      transition: $transition
+    &:hover
+      //background: linear-gradient(90deg, rgba(255,147,143,1) 0%, rgba(255,200,198,1) 100%)
       color: $bg-grey
+      border: 1px solid transparent
+    &:hover::after
+      opacity: 1
 
 
 

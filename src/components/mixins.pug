@@ -4,8 +4,7 @@
 mixin inputName
   label.feedback-form__field.feedback-form__field--name
     span Имя*
-    //input(placeholder="Дмитрий" name="name" pattern="[A-Za-zA-Яа-яЁё]" autocomplete='off' maxlength='40' required )
-    input(placeholder="Дмитрий" name="name" autocomplete='off' maxlength='40')
+    input(placeholder="Дмитрий" name="name" autocomplete='off' maxlength='30' required )
 
 
 // Tel
@@ -13,8 +12,6 @@ mixin inputTel
   label.feedback-form__field.feedback-form__field--tel
     span Телефон*
     input(type='tel' name='phone' placeholder="+7(___)___-__-__" data-tel-input='' maxlength='18'  autocomplete='off')
-
-    // pattern='.{18,}'
 
 
 mixin selectExcursions
@@ -90,7 +87,10 @@ mixin descExc(descData)
 
         button.button.button--accent.desc__button.js-popup-active Записаться
 
-        p.desc__text=descData.descText
+        .desc__text
+          each text in descData.descText
+            p=text
+
 
         include ./schedule/schedule
 

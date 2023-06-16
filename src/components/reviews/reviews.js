@@ -21,11 +21,6 @@
           prevEl: '.slider-nav__prev',
         },
 
-        // scrollbar: {
-        //   el: '.swiper-scrollbar',
-        //   draggable: true,
-        // },
-
         uniqueNavElements: true,
 
         //slidesPerView: 1.5,
@@ -65,7 +60,7 @@
 
           1100: {
             slidesPerView: 3,
-            spaceBetween: 40,  // 24
+            spaceBetween: 40,
           },
         }
 

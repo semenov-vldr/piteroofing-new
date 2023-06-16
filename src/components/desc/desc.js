@@ -17,8 +17,6 @@ new Swiper('.desc__slider', {
   // Откл функционала, если слайдов меньше, чем нужно
   watchOverflow: true,
 
-  //centeredSlides: true,
-
   slidesPerView: 1,
 
   effect: "fade",
@@ -26,13 +24,20 @@ new Swiper('.desc__slider', {
   // Отступ между слайдами
   spaceBetween: 16,
 
-  //slideClass: 'event-header__slide',
-
   // Стартовый слайд
   initialSlide: 0,
 
   loop: true,
 
-
-
 });
+
+const imagesDesc = document.querySelectorAll('.desc__slide img');
+
+if (imagesDesc) {
+  imagesDesc.forEach(image => {
+    image.setAttribute('data-src', image.src);
+    image.setAttribute('data-fancybox', "gallery");
+  });
+}
+
+

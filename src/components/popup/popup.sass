@@ -17,6 +17,8 @@
   transition: all 0.5s ease 0s
   overscroll-behavior: contain
   background-color: rgba(#000, 0.6)
+  @media (max-width: 480px)
+    padding: 10px
 
   &__content
     background-color: #EEF3FF
@@ -27,6 +29,9 @@
     width: 100%
     @media (max-width: 768px)
       padding: 20px 20px 48px
+    @media (max-width: 480px)
+      background-color: $bg-grey
+      color: $white
 
   &__close
     cursor: pointer
@@ -34,6 +39,8 @@
     margin-left: auto
     &:hover
       opacity: 0.8
+    svg
+      stroke: currentColor
 
   &__form
     margin: 8px auto 0
@@ -42,8 +49,9 @@
     align-items: center
     justify-content: center
     gap: 16px
-    max-width: 290px
     width: 100%
+    @media (min-width: 480px)
+      max-width: 290px
 
     label
       width: 100%
@@ -58,8 +66,15 @@
         border: 2px solid #414141
         border-radius: 12px
         padding: 10px 8px
-        background-color: transparent
+        background-color: #EEF3FF
         height: 40px
+        @media (max-width: 480px)
+          border-color: #767676
+          color: $white
+          background-color: $bg-grey
+
+      select option
+        color: red
 
       input::-webkit-outer-spin-button,
       input::-webkit-inner-spin-button
