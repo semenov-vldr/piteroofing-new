@@ -47,12 +47,10 @@
           </button>
           <form class="popup-call__form popup__form" method="POST" action="" enctype="multipart/form-data" autocomplete="off">
             <label class="feedback-form__field feedback-form__field--name"><span>Имя*</span>
-              <!--input(placeholder="Дмитрий" name="name" pattern="[A-Za-zA-Яа-яЁё]" autocomplete='off' maxlength='40' required )-->
-              <input placeholder="Дмитрий" name="name" autocomplete="off" maxlength="40"/>
+              <input placeholder="Дмитрий" name="name" autocomplete="off" maxlength="30" required="required"/>
             </label>
             <label class="feedback-form__field feedback-form__field--tel"><span>Телефон*</span>
               <input type="tel" name="phone" placeholder="+7(___)___-__-__" data-tel-input="" maxlength="18" autocomplete="off"/>
-              <!-- pattern='.{18,}'-->
             </label>
             <button class="button--accent popup-call__button popup__button" type="submit">Заказать звонок</button>
           </form>
@@ -61,19 +59,17 @@
       <div class="popup-full popup">
         <div class="popup-full__content popup__content">
           <button class="popup-full__close popup__close">
-            <svg width="14" height="14" stroke="#2C2C2C">
+            <svg width="14" height="14">
               <use href="./assets/img/sprite.svg#close-icon"></use>
             </svg>
           </button>
           <h3 class="popup-full__title">Оформление заявки</h3>
           <form class="popup-full__form popup__form" method="POST" action="" enctype="multipart/form-data" autocomplete="off">
             <label class="feedback-form__field feedback-form__field--name"><span>Имя*</span>
-              <!--input(placeholder="Дмитрий" name="name" pattern="[A-Za-zA-Яа-яЁё]" autocomplete='off' maxlength='40' required )-->
-              <input placeholder="Дмитрий" name="name" autocomplete="off" maxlength="40"/>
+              <input placeholder="Дмитрий" name="name" autocomplete="off" maxlength="30" required="required"/>
             </label>
             <label class="feedback-form__field feedback-form__field--tel"><span>Телефон*</span>
               <input type="tel" name="phone" placeholder="+7(___)___-__-__" data-tel-input="" maxlength="18" autocomplete="off"/>
-              <!-- pattern='.{18,}'-->
             </label>
             <label class="feedback-form__field feedback-form__field--selectExcursions"><span>Экскурсия</span>
               <select name="excursions">
@@ -146,9 +142,10 @@
             <div class="desc__content">
               <div class="desc__slider swiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/index/01.jpg"/></div>
-                  <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/index/02.jpg"/></div>
-                  <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/index/03.jpg"/></div>
+                  <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/group/01.jpg"/></div>
+                  <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/group/02.jpg"/></div>
+                  <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/group/03.jpg"/></div>
+                  <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/group/04.jpg"/></div>
                 </div>
                 <div class="swiper-navigation">
                   <div class="slider-nav__prev"></div>
@@ -160,13 +157,17 @@
                 <h3 class="desc__price-title">Цены</h3>
                 <ul class="desc__price-list">
                   <li class="desc__price-item">800₽* - В составе группы до 15 человек</li>
-                  <li class="desc__price-item">1300₽* - Индивидуальная для 4-8 человек</li>
-                  <li class="desc__price-item">1400₽* - Индивидуальная для 2-3 человек</li>
+                  <li class="desc__price-item">1500₽* - Индивидуальная для 2-3 человек</li>
+                  <li class="desc__price-item">1200₽* - Индивидуальная для 4-х и более человек</li>
                 </ul>
                 <div class="desc__price-note">*цена за 1 человека</div>
               </div>
               <button class="button button--accent desc__button js-popup-active">Записаться</button>
-              <p class="desc__text">Экскурсии по крышам — возможность открыть новые горизонты, обрести другой вгляд на привычный город, гид расскажет вам много интересных фактов о городе. Вы сможете сделать снимки, которые сохранят воспоминания об этом моменте.</p>
+              <div class="desc__text">
+                <p>Экскурсии по крышам — возможность открыть новые горизонты, обрести другой вгляд на привычный город, гид расскажет вам много интересных фактов о городе. Вы сможете сделать снимки, которые сохранят воспоминания об этом моменте.</p>
+                <p>Вид с крыши будет на Невский проспект, площадь Восстания, Владимирский собор, а так же на всю панораму города.</p>
+                <p>На экскурсии будет одна система крыш из четырёх домов.</p>
+              </div>
               <div class="schedule">
                 <h3 class="schedule__title">Расписание</h3>
                 <table class="schedule__table">

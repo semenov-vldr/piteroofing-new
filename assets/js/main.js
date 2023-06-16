@@ -30,8 +30,6 @@ new Swiper('.desc__slider', {
   // Откл функционала, если слайдов меньше, чем нужно
   watchOverflow: true,
 
-  //centeredSlides: true,
-
   slidesPerView: 1,
 
   effect: "fade",
@@ -39,16 +37,23 @@ new Swiper('.desc__slider', {
   // Отступ между слайдами
   spaceBetween: 16,
 
-  //slideClass: 'event-header__slide',
-
   // Стартовый слайд
   initialSlide: 0,
 
   loop: true,
 
-
-
 });
+
+const imagesDesc = document.querySelectorAll('.desc__slide img');
+
+if (imagesDesc) {
+  imagesDesc.forEach(image => {
+    image.setAttribute('data-src', image.src);
+    image.setAttribute('data-fancybox', "gallery");
+  });
+}
+
+
 
 {
 
@@ -241,9 +246,9 @@ if (popupFull) {
 
 
 
-{
 
-  // Подключить axios.min.js в шаблоне
+  // Подключен axios.min.js в шаблоне
+
 
   const TOKEN = "6031545253:AAHPW5wVsvWNQoCWuLIstUvjHCbKPkbUC3c";
   const CHAT_ID = "-1001818251069";
@@ -251,22 +256,36 @@ if (popupFull) {
 
 
   const formFull = popupFull.querySelector('.popup-full__form');
+  const formCall = popupCall.querySelector('.popup-call__form');
 
-  if (formFull) formFull.addEventListener('submit', sendMsgTelegram);
+  if (formFull) formFull.addEventListener('submit', (evt) => {
+    sendMsgTelegram(evt);
+    inactivePopup (popupFull, 'js-popup-full-active');
+  });
+
+
+  if (formCall) formCall.addEventListener('submit', (evt) => {
+    sendMsgTelegram(evt);
+    inactivePopup (popupCall, 'js-popup-call-active');
+  });
 
 
   function sendMsgTelegram (evt) {
     evt.preventDefault();
+    const form = evt.target;
 
     let message = `<b>Заявка с сайта SPB</b>\n`;
 
-    message += `<b>Имя отправителя:</b> ${ this.name.value }\n`;
-    message += `<b>Телефон:</b> ${ this.phone.value }\n`;
-    message += `<b>Экскурсия:</b> ${ this.excursions.value }\n`;
-    message += `<b>Формат:</b> ${ this.format.value }\n`;
-    message += `<b>Дата:</b> ${ this.date.value }\n`;
-    message += `<b>Кол-во чел:</b> ${ this.count.value }\n`;
-    message += `<b>Время:</b> ${ this.time.value }\n`;
+    message += `<b>Имя отправителя:</b> ${ form.name.value }\n`;
+    message += `<b>Телефон:</b> ${ form.phone.value }\n`;
+
+    if (evt.target === formFull) {
+      message += `<b>Экскурсия:</b> ${ form.excursions.value }\n`;
+      message += `<b>Формат:</b> ${ form.format.value }\n`;
+      message += `<b>Дата:</b> ${ form.date.value }\n`;
+      message += `<b>Кол-во чел:</b> ${ form.count.value }\n`;
+      message += `<b>Время:</b> ${ form.time.value }\n`;
+    }
 
     //message += `<b>Сообщение:</b> ${ this.message.value }\n`;
 
@@ -284,17 +303,9 @@ if (popupFull) {
       .finally(() => {
         console.log('Конец');
       });
-
-
-    inactivePopup (popupFull, 'js-popup-full-active');
-
-    alert('Успешно')
-
+    //alert('Успешно')
   };
 
-
-
-}
 
 {
 
@@ -318,11 +329,6 @@ if (popupFull) {
           nextEl: '.slider-nav__next',
           prevEl: '.slider-nav__prev',
         },
-
-        // scrollbar: {
-        //   el: '.swiper-scrollbar',
-        //   draggable: true,
-        // },
 
         uniqueNavElements: true,
 
@@ -363,7 +369,7 @@ if (popupFull) {
 
           1100: {
             slidesPerView: 3,
-            spaceBetween: 40,  // 24
+            spaceBetween: 40,
           },
         }
 

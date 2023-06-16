@@ -26,7 +26,6 @@
       <header class="header">
         <div class="header__container container"><a class="header__logo" href="index.html"><img class="header__logo-icon" src="./assets/img/icons/logo.svg"></a>
           <button class="header__burger"><span class="header__burger-line"></span><span class="header__burger-line"></span><span class="header__burger-line"></span></button>
-          <!--.header__substrate-->
           <nav class="header__nav"><img class="header__nav-arrow" src="./assets/img/icons/arrow_forward.svg">
             <ul class="header__nav-list">
               <li class="header__nav-item"><a class="header__nav-link" href="index.html#excursions">Экскурсии</a></li>
@@ -48,12 +47,10 @@
           </button>
           <form class="popup-call__form popup__form" method="POST" action="" enctype="multipart/form-data" autocomplete="off">
             <label class="feedback-form__field feedback-form__field--name"><span>Имя*</span>
-              <!--input(placeholder="Дмитрий" name="name" pattern="[A-Za-zA-Яа-яЁё]" autocomplete='off' maxlength='40' required )-->
-              <input placeholder="Дмитрий" name="name" autocomplete="off" maxlength="40"/>
+              <input placeholder="Дмитрий" name="name" autocomplete="off" maxlength="30" required="required"/>
             </label>
             <label class="feedback-form__field feedback-form__field--tel"><span>Телефон*</span>
               <input type="tel" name="phone" placeholder="+7(___)___-__-__" data-tel-input="" maxlength="18" autocomplete="off"/>
-              <!-- pattern='.{18,}'-->
             </label>
             <button class="button--accent popup-call__button popup__button" type="submit">Заказать звонок</button>
           </form>
@@ -62,19 +59,17 @@
       <div class="popup-full popup">
         <div class="popup-full__content popup__content">
           <button class="popup-full__close popup__close">
-            <svg width="14" height="14" stroke="#2C2C2C">
+            <svg width="14" height="14">
               <use href="./assets/img/sprite.svg#close-icon"></use>
             </svg>
           </button>
           <h3 class="popup-full__title">Оформление заявки</h3>
           <form class="popup-full__form popup__form" method="POST" action="" enctype="multipart/form-data" autocomplete="off">
             <label class="feedback-form__field feedback-form__field--name"><span>Имя*</span>
-              <!--input(placeholder="Дмитрий" name="name" pattern="[A-Za-zA-Яа-яЁё]" autocomplete='off' maxlength='40' required )-->
-              <input placeholder="Дмитрий" name="name" autocomplete="off" maxlength="40"/>
+              <input placeholder="Дмитрий" name="name" autocomplete="off" maxlength="30" required="required"/>
             </label>
             <label class="feedback-form__field feedback-form__field--tel"><span>Телефон*</span>
               <input type="tel" name="phone" placeholder="+7(___)___-__-__" data-tel-input="" maxlength="18" autocomplete="off"/>
-              <!-- pattern='.{18,}'-->
             </label>
             <label class="feedback-form__field feedback-form__field--selectExcursions"><span>Экскурсия</span>
               <select name="excursions">
