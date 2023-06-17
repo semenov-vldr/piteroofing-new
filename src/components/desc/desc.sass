@@ -103,7 +103,39 @@
     @media (max-width: $width-mobile)
       margin-top: 48px
     &-title
+      position: relative
       @include fontSize(20, 24)
+      width: fit-content
+      margin: 0 auto
+      svg
+        position: absolute
+        right: 0
+        top: 0
+        transform: translate(150%, -20%)
+        cursor: pointer
+        &:hover + .desc__meet-title-hint-text
+          display: inline-block
+      &-hint-text
+        position: absolute
+        display: none
+        transform: translate(20%, -50%)
+        bottom: 0
+        font-size: 10px
+        max-width: 170px
+        width: 100%
+        border: 1px solid $accent
+        padding: 5px
+        border-radius: 4px
+        background-color: $bg-grey
+        @media (max-width: 480px)
+          font-size: 8px
+          max-width: 140px
+        @media (max-width: 768px)
+          transform: translate(-100%, -60%)
+
+
     &-text
       @include fontSize(14, 20)
+
+
 

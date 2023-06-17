@@ -72,9 +72,19 @@
       opacity: 0.7
 
   &__logo
-    width: 70px
+    width: 65px
     @media (max-width: 980px)
       display: none
+    @media (min-width: 980px)
+      svg
+        stroke-dasharray: 316
+        animation: 3s fillSvg linear
+
+        @keyframes fillSvg
+          0%
+            stroke-dashoffset: 316
+          100%
+            stroke-dashoffset: 0
 
   &__phone
     cursor: pointer

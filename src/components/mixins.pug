@@ -20,8 +20,10 @@ mixin selectExcursions
     select(name="excursions")
       option(value="Не выбрано") Не выбрано
       option(value="По крышам") По крышам
-      option(value="Парадные и дворы, крыши") Парадные и дворы + крыши
       option(value="По парадным и дворам + коммуналка") По парадным и дворам + коммуналка
+      option(value="Свидание на крыше") Свидание на крыше
+      option(value="Развод мостов с крыши") Развод мостов с крыши
+
 
 
 mixin format
@@ -96,5 +98,7 @@ mixin descExc(descData)
 
         .desc__meet
           h3.desc__meet-title Место встречи
+            include ../img/icons/important.svg
+            span.desc__meet-title-hint-text Точное место встречи с гидом будет указано после оформления заявки
           p.desc__meet-text=descData.meetText
 

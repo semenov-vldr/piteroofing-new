@@ -16,14 +16,12 @@
       padding: 12px 10px
     &.js-accordion-active .accordion__content
       display: block
-
-
-
     &.js-accordion-active .accordion__title,
     &:hover .accordion__title
       color: #fff
     &.js-accordion-active .accordion__title::after
       transform: rotate(-90deg)
+
 
 
   &__title
@@ -59,7 +57,8 @@
     padding: 16px 24px
     @media (max-width: 768px)
       padding: 8px
-
     &-link
       color: $accent
+    ul
+      list-style-type: disc
 
