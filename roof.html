@@ -7,7 +7,7 @@
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
-    <title>Групповая экскурсия по крышам</title><!--[if IE]>
+    <title>Экскурсия по крышам Спб</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content=""><!--favicon-->
@@ -23,8 +23,14 @@
   </head>
   <body>
     <div class="page">
+      <div class="loader">
+        <div class="loader__icon"></div>
+      </div>
       <header class="header header--inner">
-        <div class="header__container container"><a class="header__logo" href="index.html"><img class="header__logo-icon" src="./assets/img/icons/logo.svg"></a>
+        <div class="header__container container"><a class="header__logo" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="68" height="66" viewBox="0 0 68 66" fill="none">
+<path d="M66.301 64.5166H53.8258L46.4196 45.4135H38.3314V64.5166H26.9613V31.4731C25.1113 32.1761 15.1596 32.3821 13.1764 31.779V49.6845H1.69897V1.4834H20.6923C24.9284 1.4834 28.1708 1.93562 30.4196 2.84007C32.6684 3.74451 34.6754 5.36346 36.4407 7.69693C38.2069 10.0279 39.0904 12.8872 39.0912 16.2748V16.3142H48.1463C52.0535 16.3142 55.1911 16.7665 57.5591 17.6709C59.9271 18.5753 61.8865 20.2399 63.4372 22.6647C64.9912 25.0894 65.7682 27.783 65.7682 30.7455C65.7682 36.5298 62.9784 40.682 57.3988 43.2021L66.301 64.5166Z" stroke="#CCCCCC" stroke-width="2.46667" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</a>
           <button class="header__burger"><span class="header__burger-line"></span><span class="header__burger-line"></span><span class="header__burger-line"></span></button>
           <nav class="header__nav"><img class="header__nav-arrow" src="./assets/img/icons/arrow_forward.svg">
             <ul class="header__nav-list">
@@ -75,8 +81,9 @@
               <select name="excursions">
                 <option value="Не выбрано">Не выбрано</option>
                 <option value="По крышам">По крышам</option>
-                <option value="Парадные и дворы, крыши">Парадные и дворы + крыши</option>
                 <option value="По парадным и дворам + коммуналка">По парадным и дворам + коммуналка</option>
+                <option value="Свидание на крыше">Свидание на крыше</option>
+                <option value="Развод мостов с крыши">Развод мостов с крыши</option>
               </select>
             </label>
             <label class="feedback-form__field feedback-form__field--format"><span>Формат экскурсии</span>
@@ -100,52 +107,20 @@
         </div>
       </div>
       <main>
-        <!--section.desc-->
-        <!--  .desc__container.container-->
-        <!--    h1.desc__title Групповая экскурсия по крышам-->
-        <!---->
-        <!--    .desc__content-->
-        <!--      .desc__slider.swiper-->
-        <!--        .swiper-wrapper-->
-        <!--          .swiper-slide.desc__slide-->
-        <!--            img(src="./assets/img/gallery/index/01.jpg")-->
-        <!--          .swiper-slide.desc__slide-->
-        <!--            img(src="./assets/img/gallery/index/02.jpg")-->
-        <!--          .swiper-slide.desc__slide-->
-        <!--            img(src="./assets/img/gallery/index/03.jpg")-->
-        <!---->
-        <!--        .swiper-navigation-->
-        <!--          .slider-nav__prev-->
-        <!--          .slider-nav__next-->
-        <!--        .swiper-pagination-->
-        <!---->
-        <!--      .desc__price-->
-        <!--        h3.desc__price-title Цены-->
-        <!--        ul.desc__price-list-->
-        <!--          li.desc__price-item 800₽* - В составе группы до 15 человек-->
-        <!--          li.desc__price-item 1300₽* - Индивидуальная для 4-8 человек-->
-        <!--          li.desc__price-item 1400₽* - Индивидуальная для 2-3 человек-->
-        <!--        .desc__price-note *цена за 1 человека-->
-        <!---->
-        <!--      button.button.button--accent.desc__button.js-popup-active Записаться-->
-        <!---->
-        <!--      p.desc__text Экскурсии по крышам — возможность открыть новые горизонты, обрести другой вгляд на привычный город, гид расскажет вам много интересных фактов о городе. Вы сможете сделать снимки, которые сохранят воспоминания об этом моменте.-->
-        <!---->
-        <!--      include ../schedule/schedule-->
-        <!---->
-        <!--      .desc__meet-->
-        <!--        h3.desc__meet-title Место встречи-->
-        <!--        p.desc__meet-text Рядом со станцией метро Адмиралтейская-->
         <section class="desc">
           <div class="desc__container container">
-            <h1 class="desc__title">Групповая экскурсия по крышам</h1>
+            <h1 class="desc__title"> Экскурсия по крышам</h1>
             <div class="desc__content">
               <div class="desc__slider swiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/group/01.jpg"/></div>
+                  <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/group/08.jpg"/></div>
                   <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/group/02.jpg"/></div>
                   <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/group/03.jpg"/></div>
                   <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/group/04.jpg"/></div>
+                  <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/group/05.jpg"/></div>
+                  <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/group/06.jpeg"/></div>
+                  <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/group/07.jpg"/></div>
+                  <div class="swiper-slide desc__slide"><img src="./assets/img/gallery/group/01.jpg"/></div>
                 </div>
                 <div class="swiper-navigation">
                   <div class="slider-nav__prev"></div>
@@ -158,7 +133,7 @@
                 <ul class="desc__price-list">
                   <li class="desc__price-item">800₽* - В составе группы до 15 человек</li>
                   <li class="desc__price-item">1500₽* - Индивидуальная для 2-3 человек</li>
-                  <li class="desc__price-item">1200₽* - Индивидуальная для 4-х и более человек</li>
+                  <li class="desc__price-item">1200₽* - Индивидуальная для 4 и более человек</li>
                 </ul>
                 <div class="desc__price-note">*цена за 1 человека</div>
               </div>
@@ -178,7 +153,7 @@
                     </tr>
                     <tr>
                       <td>13:00</td>
-                      <td>11:00</td>
+                      <td>12:00</td>
                     </tr>
                     <tr>
                       <td>15:00</td>
@@ -200,23 +175,28 @@
                 </table>
               </div>
               <div class="desc__meet">
-                <h3 class="desc__meet-title">Место встречи</h3>
-                <p class="desc__meet-text">Рядом со станцией метро Адмиралтейская</p>
+                <h3 class="desc__meet-title">
+                  Место встречи<svg width="12px" height="12px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <path d="m 8 0 c -4.40625 0 -8 3.59375 -8 8 s 3.59375 8 8 8 s 8 -3.59375 8 -8 s -3.59375 -8 -8 -8 z m 1 3 v 6 c 0 0.550781 -0.449219 1 -1 1 s -1 -0.449219 -1 -1 v -6 z m -1 8 c 0.550781 0 1 0.449219 1 1 s -0.449219 1 -1 1 s -1 -0.449219 -1 -1 s 0.449219 -1 1 -1 z m 0 0"
+        fill="#e8e8e8"/>
+</svg>
+<span class="desc__meet-title-hint-text">Точное место встречи с гидом будет указано после оформления заявки</span>
+                </h3>
+                <p class="desc__meet-text">В районе станции метро &quot;Площадь Восстания&quot;</p>
               </div>
             </div>
           </div>
         </section>
-        <div class="others">
+        <section class="others">
           <div class="others__container container">
             <h2 class="others__title title-section">Другие экскурсии</h2>
             <div class="others__list"><a class="others__item others-item" href="##"><img class="others-item__img" src="./assets/img/excursions/03.jpg">
-                <h3 class="others-item__title">По парадным, дворам и коммуналка</h3><span class="others-item__price">от 1000 ₽</span></a><a class="others__item others-item" href="##"><img class="others-item__img" src="./assets/img/excursions/03.jpg">
-                <h3 class="others-item__title">Парадные, крыши и дворы</h3><span class="others-item__price">1700 ₽</span></a><a class="others__item others-item" href="##"><img class="others-item__img" src="./assets/img/excursions/04.jpg">
-                <h3 class="others-item__title">Свидание на крыше</h3><span class="others-item__price">от 4500 ₽</span></a><a class="others__item others-item" href="##"><img class="others-item__img" src="./assets/img/excursions/05.jpg">
-                <h3 class="others-item__title">Фотосессия на крыше</h3><span class="others-item__price">4500 ₽</span></a></div>
+                <h3 class="others-item__title">По парадным, дворам и коммуналка</h3><span class="others-item__price">от 1000 ₽</span></a><a class="others__item others-item" href="##"><img class="others-item__img" src="./assets/img/excursions/04.jpg">
+                <h3 class="others-item__title">Свидание на крыше</h3><span class="others-item__price">от 4500 ₽</span></a><a class="others__item others-item" href="##"><img class="others-item__img" src="./assets/img/excursions/06.jpg">
+                <h3 class="others-item__title">Развод мостов с крыши</h3><span class="others-item__price">1400 ₽</span></a></div>
           </div>
-        </div>
-        <div class="reviews" id="reviews">
+        </section>
+        <section class="reviews" id="reviews">
           <div class="reviews__container container">
             <h2 class="title-section">Отзывы</h2>
             <div class="reviews__slider swiper">
@@ -232,9 +212,8 @@
             </div>
             <button class="reviews__button button button--accent js-popup-active">Записаться</button>
           </div>
-        </div>
-        <!-- пример разметки-->
-        <div class="accordion" id="faq">
+        </section>
+        <section class="accordion" id="faq">
           <div class="accordion__container container">
             <h2 class="title-section">Часто задаваемые вопросы</h2>
             <ol class="accordion__list">
@@ -246,9 +225,9 @@
                     <li>Не толкать других участников и не держаться за них</li>
                     <li>Запрещено трогать провода и кидать вниз любые предметы</li>
                     <li>Не подходить близко к краю и не заходить за специальные ограждения</li>
+                    <li>Проносить с собой алкогольные напитки запрещено. Так же не имеет смысла "для храбрости" принимать алкоголь перед экскурсией. Страх у вас не пропадет.</li>
+                    <li>Находиться во время экскурсии в алкогольном опьянении запрещено!</li>
                   </ul>
-                  <p>Проносить с собой алкогольные напитки запрещено. Так же не имеет смысла "для храбрости" принимать алкоголь перед экскурсией. Страх у вас не пропадет.</p>
-                  <p>Находиться во время экскурсии в алкогольном опьянении запрещено!</p>
                 </div>
               </li>
               <li class="accordion__item">
@@ -261,19 +240,14 @@
               </li>
               <li class="accordion__item">
                 <p class="accordion__title">Как все это проходит?</p>
-                <p class="accordion__content">??Мы всегда идем навстречу клиенту и стараемся найти выход из текущего положения Заказчика. В некоторых случаях мы допускаем возможность пропустить его вне очереди и работать в ускоренном режиме.</p>
-              </li>
-              <li class="accordion__item">
-                <p class="accordion__title">Когда можно подняться на крышу?</p>
-                <p class="accordion__content">Мы всегда идем навстречу клиенту и стараемся найти выход из текущего положения Заказчика. В некоторых случаях мы допускаем возможность пропустить его вне очереди и работать в ускоренном режиме.</p>
-              </li>
-              <li class="accordion__item">
-                <p class="accordion__title">Мы одни будем на крыше?</p>
-                <p class="accordion__content">Мы всегда идем навстречу клиенту и стараемся найти выход из текущего положения Заказчика. В некоторых случаях мы допускаем возможность пропустить его вне очереди и работать в ускоренном режиме.</p>
+                <div class="accordion__content">
+                  <p>Включая подъем и спуск, прогулка длится около часа. Она начинается с экскурсионной части, когда гид рассказывает истории, которые, на его взгляд, будут интересны конкретной группе.</p>
+                  <p>После этого группа фотографируется и наслаждается видом.</p>
+                </div>
               </li>
               <li class="accordion__item">
                 <p class="accordion__title">Что делать, если по прогнозу дождь?</p>
-                <p class="accordion__content">Мы всегда идем навстречу клиенту и стараемся найти выход из текущего положения Заказчика. В некоторых случаях мы допускаем возможность пропустить его вне очереди и работать в ускоренном режиме.</p>
+                <p class="accordion__content">Маленький дождь не помеха для прогулки по крышам но если начнется ливень то экскурсия будет перенесена на ближайшее или удобное для вас время.</p>
               </li>
               <li class="accordion__item">
                 <p class="accordion__title">Как одеться и обуться чтобы было комфортно?</p>
@@ -282,11 +256,11 @@
               </li>
               <li class="accordion__item">
                 <p class="accordion__title">Есть ли на крыше уборная?</p>
-                <p class="accordion__content">Мы всегда идем навстречу клиенту и стараемся найти выход из текущего положения Заказчика. В некоторых случаях мы допускаем возможность пропустить его вне очереди и работать в ускоренном режиме.</p>
+                <p class="accordion__content">На крыше уборных нет, поэтому продумайте этот момент заранее.</p>
               </li>
               <li class="accordion__item">
                 <p class="accordion__title">У вас есть подарочные сертификаты?</p>
-                <p class="accordion__content">Мы всегда идем навстречу клиенту и стараемся найти выход из текущего положения Заказчика. В некоторых случаях мы допускаем возможность пропустить его вне очереди и работать в ускоренном режиме.</p>
+                <p class="accordion__content">Да, у нас есть подарочные сертификаты. Чтобы заказать сертификат, Вы можете написать нам в мессенджеры или позвонить.</p>
               </li>
               <li class="accordion__item">
                 <p class="accordion__title">Как оплатить?</p>
@@ -294,7 +268,7 @@
               </li>
             </ol>
           </div>
-        </div>
+        </section>
       </main>
       <footer class="footer">
         <div class="footer__container container">
@@ -313,7 +287,10 @@
               <li class="footer__contacts-item"><a class="footer__contacts-link footer__contacts-link--telegram" href="https://t.me/sinceresv">Телеграм</a></li>
               <li class="footer__contacts-item"><a class="footer__contacts-link footer__contacts-link--whatsapp" href="https://wa.me/79255536220">WhatsApp</a></li>
             </ul>
-          </div><img class="footer__logo" src="./assets/img/icons/logo.svg"><a class="footer__politics" href="##">Политика конфиденциальности</a>
+          </div>
+          <svg class="footer__logo">
+            <use href="./assets/img/sprite.svg#logo"></use>
+          </svg><a class="footer__politics" href="##">Политика конфиденциальности</a>
         </div>
       </footer>
     </div>

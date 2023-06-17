@@ -23,8 +23,14 @@
   </head>
   <body>
     <div class="page">
+      <div class="loader">
+        <div class="loader__icon"></div>
+      </div>
       <header class="header">
-        <div class="header__container container"><a class="header__logo" href="index.html"><img class="header__logo-icon" src="./assets/img/icons/logo.svg"></a>
+        <div class="header__container container"><a class="header__logo" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="68" height="66" viewBox="0 0 68 66" fill="none">
+<path d="M66.301 64.5166H53.8258L46.4196 45.4135H38.3314V64.5166H26.9613V31.4731C25.1113 32.1761 15.1596 32.3821 13.1764 31.779V49.6845H1.69897V1.4834H20.6923C24.9284 1.4834 28.1708 1.93562 30.4196 2.84007C32.6684 3.74451 34.6754 5.36346 36.4407 7.69693C38.2069 10.0279 39.0904 12.8872 39.0912 16.2748V16.3142H48.1463C52.0535 16.3142 55.1911 16.7665 57.5591 17.6709C59.9271 18.5753 61.8865 20.2399 63.4372 22.6647C64.9912 25.0894 65.7682 27.783 65.7682 30.7455C65.7682 36.5298 62.9784 40.682 57.3988 43.2021L66.301 64.5166Z" stroke="#CCCCCC" stroke-width="2.46667" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</a>
           <button class="header__burger"><span class="header__burger-line"></span><span class="header__burger-line"></span><span class="header__burger-line"></span></button>
           <nav class="header__nav"><img class="header__nav-arrow" src="./assets/img/icons/arrow_forward.svg">
             <ul class="header__nav-list">
@@ -75,8 +81,9 @@
               <select name="excursions">
                 <option value="Не выбрано">Не выбрано</option>
                 <option value="По крышам">По крышам</option>
-                <option value="Парадные и дворы, крыши">Парадные и дворы + крыши</option>
                 <option value="По парадным и дворам + коммуналка">По парадным и дворам + коммуналка</option>
+                <option value="Свидание на крыше">Свидание на крыше</option>
+                <option value="Развод мостов с крыши">Развод мостов с крыши</option>
               </select>
             </label>
             <label class="feedback-form__field feedback-form__field--format"><span>Формат экскурсии</span>
@@ -120,7 +127,10 @@
               <li class="footer__contacts-item"><a class="footer__contacts-link footer__contacts-link--telegram" href="https://t.me/sinceresv">Телеграм</a></li>
               <li class="footer__contacts-item"><a class="footer__contacts-link footer__contacts-link--whatsapp" href="https://wa.me/79255536220">WhatsApp</a></li>
             </ul>
-          </div><img class="footer__logo" src="./assets/img/icons/logo.svg"><a class="footer__politics" href="##">Политика конфиденциальности</a>
+          </div>
+          <svg class="footer__logo">
+            <use href="./assets/img/sprite.svg#logo"></use>
+          </svg><a class="footer__politics" href="##">Политика конфиденциальности</a>
         </div>
       </footer>
     </div>

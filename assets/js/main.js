@@ -171,6 +171,20 @@ if (header) {
 
 
 
+const loader = document.querySelector('.loader');
+
+if (loader) {
+
+  function hideLoader () {
+    loader.classList.add('hide');
+    setTimeout(() => {
+      loader.remove();
+    }, 500)
+  };
+
+  window.addEventListener('load', hideLoader);
+}
+
 function activePopup (popup, classActive) {
   popup.classList.add(classActive);
   blockScrollBody();
