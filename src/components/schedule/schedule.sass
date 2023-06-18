@@ -3,11 +3,12 @@
 
   &__table
     width: 100%
-    max-width: 690px
     border-collapse: collapse
     border-spacing: 0
     text-align: center
     @include fontSize(16, 20)
+    @media (max-width: $width-mobile)
+      max-width: 690px
 
     & td,
     & th
@@ -28,11 +29,15 @@
       @media (max-width: 768px)
         height: 40px
 
-
-
   &__title
     @include fontSize(20, 24)
     text-align: center
-    margin-bottom: 32px
+    margin-bottom: 24px
     font-weight: 500
+
+  &.schedule--paradnye,
+  &.schedule--bridge
+    .schedule__table
+      & td:nth-child(odd)
+        border-right: none
 

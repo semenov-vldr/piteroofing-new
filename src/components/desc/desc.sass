@@ -60,7 +60,8 @@
 
     &-item
       @include fontSize(14, 20)
-      &:not(:last-child)
+      &:not(:last-child),
+      &:first-child
         border-bottom: 1px solid #9B9B9B
         padding-bottom: 12px
 
@@ -131,8 +132,7 @@
           font-size: 8px
           max-width: 140px
         @media (max-width: 768px)
-          transform: translate(-100%, -60%)
-
+          transform: translate(-50%, -43px)
 
     &-text
       @include fontSize(14, 20)

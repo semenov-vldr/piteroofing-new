@@ -85,7 +85,9 @@ mixin descExc(descData)
           ul.desc__price-list
             each price in descData.prices
               li.desc__price-item=price
-          .desc__price-note *цена за 1 человека
+
+          if descData.name !== "svidanie"
+            .desc__price-note *цена за 1 человека
 
         button.button.button--accent.desc__button.js-popup-active Записаться
 
@@ -93,8 +95,16 @@ mixin descExc(descData)
           each text in descData.descText
             p=text
 
+        case descData.name
+          when "roof"
+            include ./schedule/schedule-roof
+          when "paradnye"
+            include ./schedule/schedule-paradnye
+          when "bridge"
+            include ./schedule/schedule-bridge
 
-        include ./schedule/schedule
+
+
 
         .desc__meet
           h3.desc__meet-title Место встречи

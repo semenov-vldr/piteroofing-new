@@ -1,0 +1,14 @@
+extends ../layouts/page-inner
+
+block variables
+  - var title = "Свидание на крыше"
+  - var pageClass = ''
+  - var activePage = 'index'
+
+block content
+
+  include ../components/desc/desc-svidanie
+  include ../components/others/others-svidanie
+
+  include ../components/reviews/reviews
+  include ../components/accordion/accordion
