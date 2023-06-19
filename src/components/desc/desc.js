@@ -36,7 +36,7 @@ const imagesDesc = document.querySelectorAll('.desc__slide img');
 if (imagesDesc) {
   imagesDesc.forEach(image => {
     image.setAttribute('data-src', image.src);
-    image.setAttribute('data-fancybox', "gallery");
+    image.setAttribute('data-fancybox', "images-desc");
   });
 }
 
