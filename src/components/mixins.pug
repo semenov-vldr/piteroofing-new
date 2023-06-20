@@ -53,6 +53,17 @@ mixin time
     span Ориентировочное время
     input( name='time' placeholder="15:00" autocomplete='off')
 
+mixin communication
+  label.feedback-form__field.feedback-form__field--communication
+    span Способ связи с Вами
+    select(name="communication")
+      option(value="Не выбрано") Не выбрано
+      option(value="Telegram") Telegram
+      option(value="WhatsApp") WhatsApp
+      option(value="Tel") Телефон
+
+
+
 //----------------
 
 // Text
