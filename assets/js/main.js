@@ -260,14 +260,11 @@ if (popupFull) {
 
 
 
-
-  // Подключен axios.min.js в шаблоне
-
+// Подключен axios.min.js в шаблоне
 
   const TOKEN = "6031545253:AAHPW5wVsvWNQoCWuLIstUvjHCbKPkbUC3c";
   const CHAT_ID = "-1001818251069";
   const URL_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
-
 
   const formFull = popupFull.querySelector('.popup-full__form');
   const formCall = popupCall.querySelector('.popup-call__form');
@@ -299,6 +296,7 @@ if (popupFull) {
       message += `<b>Дата:</b> ${ form.date.value }\n`;
       message += `<b>Кол-во чел:</b> ${ form.count.value }\n`;
       message += `<b>Время:</b> ${ form.time.value }\n`;
+      message += `<b>Способ связи:</b> ${ form.communication.value }\n`;
     }
 
     //message += `<b>Сообщение:</b> ${ this.message.value }\n`;
@@ -317,7 +315,7 @@ if (popupFull) {
       .finally(() => {
         console.log('Конец');
       });
-    //alert('Успешно')
+    alert('Заявка отправлена успешно');
   };
 
 
