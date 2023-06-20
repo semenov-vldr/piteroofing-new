@@ -474,6 +474,16 @@ function unblockScrollBody () {
 //
 // };
 
+const images = document.querySelectorAll('img');
+
+if (images) {
+  images.forEach(img => {
+    img.setAttribute('loading', 'lazy');
+  });
+}
+
+
+
 const phoneInputs = document.querySelectorAll('input[data-tel-input]');
 
 const getInputNumbersValue = (input) => {
